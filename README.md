@@ -47,7 +47,6 @@ To set up this project locally, follow these steps:
 ## Build & Deployment
 
 To build the project for production, run the following command:
-    
     ```bash
     yarn build
 
@@ -66,4 +65,3 @@ The portfolio is live at [dhruvchheda.com](https://dhruvchheda.com). Feel free t
 ---
 
 Thank you for visiting my portfolio! 🚀
-```
