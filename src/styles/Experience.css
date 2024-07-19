@@ -1,0 +1,185 @@
+.experience-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.experience-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.experience-text h2 {
+  font-size: 32px;
+  color: #bb86fc;
+  margin-bottom: 10px;
+}
+
+.experience-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.experience-illustration {
+  flex: 1;
+  text-align: right;
+}
+
+.experience-illustration img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.experience-illustration img:hover {
+  transform: scale(1.05);
+}
+
+.internships-section {
+  margin-top: 40px;
+}
+
+.internships-section h3 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #bb86fc;
+}
+
+/* Timeline styles */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #bb86fc;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-block {
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.timeline-block-left {
+  justify-content: flex-start;
+  direction: ltr;
+}
+
+.timeline-block-right {
+  justify-content: flex-end;
+  direction: ltr;
+}
+
+.timeline-block .marker {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #bb86fc;
+  border: 2px solid #1e1e1e;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 2;
+}
+
+.timeline-block .timeline-content {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  width: 45%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #e0e0e0;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-block:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-block .timeline-content:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-block-left .timeline-content {
+  text-align: right;
+}
+
+.timeline-block .timeline-content h4 {
+  margin-top: 0;
+  color: #bb86fc;
+}
+
+.timeline-block .timeline-content span {
+  display: block;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.timeline-block .timeline-content p {
+  margin: 0;
+}
+
+.company-name {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .experience-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .experience-text {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .experience-illustration {
+    text-align: center;
+  }
+
+  .timeline-block,
+  .timeline-block-left {
+    justify-content: center;
+    text-align: center;
+    direction: ltr;
+  }
+
+  .timeline-block .timeline-content,
+  .timeline-block-left .timeline-content {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Personal Portfolio - Dhruv Chheda
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the personal portfolio of Dhruv Chheda! This website showcases my skills, projects, and experience in web development. Explore my work and get in touch to discuss opportunities.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This is a professional portfolio website designed to highlight my expertise in **web development** and **app development**. It features various projects, skills, and a contact form, all built using modern web technologies.
 
-### `yarn start`
+## Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Interactive Projects**: Detailed showcases of projects including web applications and mobile apps.
+- **Skills & Technologies**: A section dedicated to the technologies I specialize in.
+- **Responsive Design**: Optimized for both desktop and mobile devices to ensure a seamless user experience.
+- **Contact Form**: Directly reach out to me through the integrated contact form for collaboration or queries.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `yarn test`
+- **React**: For building dynamic and interactive user interfaces.
+- **React Router**: For managing navigation and routing.
+- **React Icons**: For incorporating various icons into the design.
+- **CSS**: For styling and layout of the application.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `yarn build`
+To set up this project locally, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/chhedadhruv/personal-portfolio.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Navigate to Project Directory**:
+   ```bash
+   cd personal-portfolio
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Install Required Dependencies**:
+   ```bash
+    yarn install
 
-### `yarn eject`
+4. **Start the Development Server**:
+   ```bash
+   yarn start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. **Access the Application**:
+   ```bash
+    http://localhost:3000/
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Build & Deployment
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To build the project for production, run the following command:
+    
+    ```bash
+    yarn build
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This will create an optimized build of the project in the `build` folder. You can then deploy this to a hosting platform of your choice.
 
-## Learn More
+## Live Website
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The portfolio is live at [dhruvchheda.com](https://dhruvchheda.com). Feel free to explore the website and reach out to me.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contact Me
 
-### Code Splitting
+- **Email**: [me@dhruvchheda.com](mailto:me@dhruvchheda.com)
+- **LinkedIn**: [Dhruv Chheda](https://www.linkedin.com/in/dhruv-chheda-52637522a/)
+- **GitHub**: [chhedadhruv](https://github.com/chhedadhruv)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for visiting my portfolio! 🚀
+```

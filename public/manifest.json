@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Dhruv Chheda",
+  "name": "Dhruv Chheda - Web & App Developer Portfolio",
+  "description": "Explore the portfolio of Dhruv Chheda, a skilled web and app developer specializing in JavaScript, React, and React Native. Discover his innovative and responsive applications.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,9 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#bb86fc",
+  "background_color": "#121212",
+  "orientation": "portrait-primary",
+  "lang": "en-US",
+  "scope": "/"
 }

@@ -1,0 +1,100 @@
+.education-page {
+  padding: 50px 20px;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.activities-section,
+.achievements-section,
+.certifications-section {
+  padding: 40px 20px;
+}
+
+.education-section h2,
+.activities-section h2,
+.achievements-section h2,
+.certifications-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: #bb86fc;
+  border-bottom: 2px solid #bb86fc;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background-color: #fff;
+}
+
+.card-info {
+  padding: 20px;
+  background-color: #1e1e1e;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #bb86fc;
+}
+
+.card-years,
+.card-description {
+  font-size: 1rem;
+  color: #b0b0b0;
+}
+
+@media (max-width: 768px) {
+  .education-page {
+    padding: 20px 10px;
+  }
+
+  .education-section h2,
+  .activities-section h2,
+  .achievements-section h2,
+  .certifications-section h2 {
+    font-size: 2rem;
+  }
+
+  .card img {
+    height: 140px;
+  }
+
+  .card-info {
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-years,
+  .card-description {
+    font-size: 0.9rem;
+  }
+}
