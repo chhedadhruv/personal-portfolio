@@ -17,6 +17,7 @@ import {
   SiFirebase,
   SiGit,
 } from "react-icons/si";
+import Resume from "../assets/Dhruv_Chheda_Resume.pdf";
 import "../styles/HomeScreen.css";
 
 function HomeScreen() {
@@ -88,7 +89,7 @@ function HomeScreen() {
               </a>
             </div>
             <a
-              href="path-to-your-resume.pdf"
+              href={Resume}
               download
               className="download-resume"
               title="Download Resume"

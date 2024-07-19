@@ -60,6 +60,7 @@
 .timeline {
   position: relative;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 .timeline::before {
@@ -166,20 +167,35 @@
   }
 
   .timeline-block,
-  .timeline-block-left {
+  .timeline-block-left,
+  .timeline-block-right {
+    z-index: 1;
     justify-content: center;
     text-align: center;
     direction: ltr;
+    flex-direction: column;
+    align-items: center;
   }
 
   .timeline-block .timeline-content,
-  .timeline-block-left .timeline-content {
+  .timeline-block-left .timeline-content,
+  .timeline-block-right .timeline-content {
     width: 90%;
     margin-top: 20px;
+    text-align: center;
   }
 
   .timeline::before {
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .timeline-block .marker {
+    display: none;
+  }
+
+  .timeline-block .timeline-content {
+    position: relative;
+    top: -10px;
   }
 }
