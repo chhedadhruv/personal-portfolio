@@ -99,11 +99,8 @@ const EducationCards = () => {
         <h2>Co-Curricular Activities</h2>
         <div className="cards-container">
           {activitiesData.map((activity) => (
-            <a
+            <div
               key={activity.id}
-              href={activity.link}
-              target="_blank"
-              rel="noopener noreferrer"
               className="card"
             >
               <img src={activity.image} alt={activity.title} />
@@ -111,7 +108,7 @@ const EducationCards = () => {
                 <h3 className="card-title">{activity.title}</h3>
                 <p className="card-description">{activity.description}</p>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </section>
