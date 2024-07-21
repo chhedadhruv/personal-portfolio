@@ -1,4 +1,5 @@
 import React from "react";
+import LazyLoad from "react-lazyload";
 import Illustration from "../assets/experience.png";
 import "../styles/Experience.css";
 
@@ -53,7 +54,9 @@ const Experience = () => {
           </p>
         </div>
         <div className="experience-illustration">
-          <img src={Illustration} alt="Experience" />
+          <LazyLoad height={200}>
+            <img src={Illustration} alt="Experience" />
+          </LazyLoad>
         </div>
       </div>
       <div className="internships-section">

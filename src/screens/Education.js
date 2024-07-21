@@ -1,4 +1,5 @@
 import React from "react";
+import LazyLoad from "react-lazyload";
 import School from "../assets/education/school.jpeg";
 import College from "../assets/education/college.jpg";
 import University from "../assets/education/university.jpeg";
@@ -41,14 +42,6 @@ const activitiesData = [
       "As a Web Expert with REDX-AI Club, I played a pivotal role in driving growth and development through strategic organization of workshops, webinars, and hackathons focused on Artificial Intelligence, Machine Learning, and Data Science. Leveraging collaboration with industry leaders, I mentored students to cultivate a dynamic environment of innovation and continuous learning.",
     link: "https://redxai.club",
   },
-  // {
-  //   id: 2,
-  //   title: "Conducted a Session on Mobile App Development",
-  //   image: REDXAIClub,
-  //   description:
-  //     'During the winter internship program, I led an insightful session on "Mobile App Development with React Native." This session provided practical insights and real-world applications, emphasizing hands-on learning and collaboration with the Computer Engineering department, Software Development Cell, and REDX-AI Club.',
-  //   link: "https://developers.google.com/community/dsc",
-  // },
   {
     id: 2,
     title: "Certificate of Selection, Aavishkar 2023-24",
@@ -103,7 +96,9 @@ const EducationCards = () => {
               key={activity.id}
               className="card"
             >
-              <img src={activity.image} alt={activity.title} />
+              <LazyLoad height={200} offset={100} once>
+                <img src={activity.image} alt={activity.title} />
+              </LazyLoad>
               <div className="card-info">
                 <h3 className="card-title">{activity.title}</h3>
                 <p className="card-description">{activity.description}</p>

@@ -1,4 +1,5 @@
 import React from "react";
+import LazyLoad from "react-lazyload";
 import TicTacToe from "../assets/projects/tictactoe.jpeg";
 import Tracka from "../assets/projects/tracka.png";
 import Resume from "../assets/projects/resume.png";
@@ -67,12 +68,13 @@ const Projects = () => {
       <section className="project-grid">
         {projectData.map((project) => (
           <article className="project-card" key={project.id}>
-            <img
-              src={project.image}
-              alt={`Screenshot of ${project.title}`}
-              className="project-image"
-              loading="lazy"
-            />
+            <LazyLoad height={200} offset={100} once>
+              <img
+                src={project.image}
+                alt={`Screenshot of ${project.title}`}
+                className="project-image"
+              />
+            </LazyLoad>
             <div className="project-content">
               <h2 className="project-title">{project.title}</h2>
               <p className="project-description">{project.description}</p>

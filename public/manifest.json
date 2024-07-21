@@ -19,11 +19,34 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#bb86fc",
   "background_color": "#121212",
   "orientation": "portrait-primary",
   "lang": "en-US",
-  "scope": "/"
+  "scope": "/",
+  "categories": ["portfolio", "developer", "web development", "app development", "react", "react native", "javascript"],
+  "screenshots": [
+    {
+      "src": "screenshot1.png",
+      "type": "image/png",
+      "sizes": "640x480"
+    },
+    {
+      "src": "screenshot2.png",
+      "type": "image/png",
+      "sizes": "640x480"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web",
+      "url": "https://www.linkedin.com/in/dhruv-chheda-52637522a/"
+    },
+    {
+      "platform": "web",
+      "url": "https://www.instagram.com/chheda.dhruv3/"
+    }
+  ]
 }

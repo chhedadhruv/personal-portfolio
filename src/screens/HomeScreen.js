@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import LazyLoad from "react-lazyload";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import ProfilePhoto from "../assets/profile.png";
 import {
@@ -97,11 +98,13 @@ function HomeScreen() {
               Download Resume
             </a>
           </div>
-          <img
-            src={ProfilePhoto}
-            alt="Portrait of Dhruv Chheda"
-            className="hero-photo"
-          />
+          <LazyLoad height={200} offset={100} once>
+            <img
+              src={ProfilePhoto}
+              alt="Dhruv Chheda, Web and App Developer"
+              className="hero-photo"
+            />
+          </LazyLoad>
         </div>
       </section>
 

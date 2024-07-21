@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
+import LazyLoad from 'react-lazyload';
 import '../styles/Contact.css';
-import Illustration from '../assets/illustration.png'; // Add your illustration path here
+import Illustration from '../assets/illustration.png';
 
 function Contact() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
@@ -84,7 +85,9 @@ function Contact() {
         </form>
       </div>
       <div className="contact-illustration">
-        <img src={Illustration} alt="Contact Illustration" />
+        <LazyLoad height={200} offset={100} once>
+          <img src={Illustration} alt="Contact Illustration" />
+        </LazyLoad>
       </div>
     </div>
   );
