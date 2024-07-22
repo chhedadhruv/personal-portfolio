@@ -64,7 +64,7 @@ function HomeScreen() {
 
             <div className="social-media">
               <a
-                href="https://www.linkedin.com/in/dhruv-chheda-52637522a/"
+                href="https://www.linkedin.com/in/dhruv-chheda/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
