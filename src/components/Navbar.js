@@ -33,9 +33,12 @@ function Navbar() {
     return (
         <nav>
             <div className="logo">
-                <Link to="/" className={isActive('/')} onClick={handleLinkClick}>Home</Link>
+                <Link to="/" className={isActive('/')} onClick={handleLinkClick}>Dhruv Chheda</Link>
             </div>
             <ul className={menuOpen ? 'nav-links nav-active' : 'nav-links'}>
+                <li>
+                    <Link to="/" className={isActive('/')} onClick={handleLinkClick}>Home</Link>
+                </li>
                 <li>
                     <Link to="/projects" className={isActive('/projects')} onClick={handleLinkClick}>Projects</Link>
                 </li>

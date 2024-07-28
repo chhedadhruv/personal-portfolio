@@ -1,23 +1,26 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Contact from "./screens/Contact";
-import Education from "./screens/Education";
-import Experience from "./screens/Experience";
-import HomeScreen from "./screens/HomeScreen";
-import Projects from "./screens/Projects";
 import Navbar from "./components/Navbar";
+
+const Contact = lazy(() => import("./screens/Contact"));
+const Education = lazy(() => import("./screens/Education"));
+const Experience = lazy(() => import("./screens/Experience"));
+const HomeScreen = lazy(() => import("./screens/HomeScreen"));
+const Projects = lazy(() => import("./screens/Projects"));
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<HomeScreen />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<HomeScreen />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }

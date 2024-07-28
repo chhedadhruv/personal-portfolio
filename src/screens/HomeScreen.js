@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
-import ProfilePhoto from "../assets/profile.webp";
 import {
   SiHtml5,
   SiCss3,
@@ -98,7 +97,7 @@ function HomeScreen() {
             </a>
           </div>
           <img
-            src={ProfilePhoto}
+            src={`${process.env.PUBLIC_URL}/dhruv-chheda.webp`}
             alt="Dhruv Chheda, Web and App Developer"
             className="hero-photo"
           />
