@@ -1,123 +1,122 @@
 .contact-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 40px 20px;
-    background-color: #121212;
-    color: #e0e0e0;
-    gap: 20px;
-    flex-wrap: wrap; 
-  }
-  
-  .contact-form-container {
-    flex: 1;
-    max-width: 600px;
-    display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 40px 20px;
+  background-color: #121212;
+  color: #e0e0e0;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-form-container {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #121212;
+  color: #e0e0e0;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.contact-form-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #282828;
+  border-radius: 4px;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #bb86fc;
+  outline: none;
+}
+
+.submit-button {
+  background-color: #bb86fc;
+  color: #1e1e1e;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #1e1e1e;
+  color: #bb86fc;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.status-message {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.status-message.success {
+  color: #28a745;
+}
+
+.status-message.error {
+  color: #dc3545;
+}
+
+.contact-illustration {
+  flex: 1;
+  max-width: 600px;
+}
+
+.contact-illustration img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
     flex-direction: column;
     align-items: center;
-    padding: 40px 20px;
-    background-color: #121212;
-    color: #e0e0e0;
-    border-radius: 8px;
-    box-sizing: border-box;
   }
-  
-  .contact-form-container h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+
+  .contact-form-container {
+    max-width: 100%;
+    padding: 20px;
   }
-  
-  .contact-form {
-    width: 100%;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 1.1rem;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #282828;
-    border-radius: 4px;
-    background-color: #1e1e1e;
-    color: #e0e0e0;
-    font-size: 1rem;
-  }
-  
-  .form-group input:focus,
-  .form-group textarea:focus {
-    border-color: #bb86fc;
-    outline: none;
-  }
-  
-  .submit-button {
-    background-color: #bb86fc;
-    color: #1e1e1e;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .submit-button:hover {
-    background-color: #1e1e1e;
-    color: #bb86fc;
-  }
-  
-  .error-message {
-    color: #ff6b6b;
-    font-size: 0.9rem;
-    margin-top: 5px;
-  }
-  
-  .status-message {
-    margin-top: 20px;
-    font-weight: bold;
-  }
-  
-  .status-message.success {
-    color: #28a745;
-  }
-  
-  .status-message.error {
-    color: #dc3545;
-  }
-  
+
   .contact-illustration {
-    flex: 1;
-    max-width: 600px;
+    max-width: 100%;
+    margin-top: 20px;
   }
-  
-  .contact-illustration img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-  
-  @media (max-width: 768px) {
-    .contact-container {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    .contact-form-container {
-      max-width: 100%;
-      padding: 20px;
-    }
-    
-    .contact-illustration {
-      max-width: 100%;
-      margin-top: 20px;
-    }
-  }
-  
+}
