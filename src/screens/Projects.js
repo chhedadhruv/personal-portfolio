@@ -1,4 +1,5 @@
 import React from "react";
+import RoboFriends from "../assets/projects/robofriends.webp";
 import TicTacToe from "../assets/projects/tictactoe.webp";
 import Tracka from "../assets/projects/tracka.webp";
 import Resume from "../assets/projects/resume.webp";
@@ -13,7 +14,7 @@ const projectData = [
     description:
       "RoboFriends is a React web application that allows users to search for robots and generate unique robot cards. It fetches data from Google Sheets and uses Robohash to create personalized robot images.",
     technologies: ["React", "React Bootstrap", "Robohash"],
-    image: `https://robohash.org/1?set=set3`,
+    image: RoboFriends,
     link: "https://github.com/chhedadhruv/Robofriends",
   },
   {
