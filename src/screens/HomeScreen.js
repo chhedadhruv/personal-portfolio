@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
-import LazyLoad from "react-lazyload";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
-import ProfilePhoto from "../assets/profile.png";
+import ProfilePhoto from "../assets/profile.webp";
 import {
   SiHtml5,
   SiCss3,
@@ -98,13 +97,11 @@ function HomeScreen() {
               Download Resume
             </a>
           </div>
-          <LazyLoad height={200} offset={100} once>
-            <img
-              src={ProfilePhoto}
-              alt="Dhruv Chheda, Web and App Developer"
-              className="hero-photo"
-            />
-          </LazyLoad>
+          <img
+            src={ProfilePhoto}
+            alt="Dhruv Chheda, Web and App Developer"
+            className="hero-photo"
+          />
         </div>
       </section>
 

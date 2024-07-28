@@ -1,12 +1,11 @@
 import React from "react";
-import LazyLoad from "react-lazyload";
-import School from "../assets/education/school.jpeg";
-import College from "../assets/education/college.jpg";
-import University from "../assets/education/university.jpeg";
-import GDSC from "../assets/education/gdsc.jpeg";
-import StudentCouncil from "../assets/education/council.jpeg";
-import REDXAIClub from "../assets/education/redx.png";
-import Aavishkar from "../assets/education/aavishkar.jpg";
+import School from "../assets/education/school.webp";
+import College from "../assets/education/college.webp";
+import University from "../assets/education/university.webp";
+import GDSC from "../assets/education/gdsc.webp";
+import StudentCouncil from "../assets/education/council.webp";
+import REDXAIClub from "../assets/education/redx.webp";
+import Aavishkar from "../assets/education/aavishkar.webp";
 import "../styles/Education.css";
 
 const educationData = [
@@ -92,13 +91,8 @@ const EducationCards = () => {
         <h2>Co-Curricular Activities</h2>
         <div className="cards-container">
           {activitiesData.map((activity) => (
-            <div
-              key={activity.id}
-              className="card"
-            >
-              <LazyLoad height={200} offset={100} once>
-                <img src={activity.image} alt={activity.title} />
-              </LazyLoad>
+            <div key={activity.id} className="card">
+              <img src={activity.image} alt={activity.title} />
               <div className="card-info">
                 <h3 className="card-title">{activity.title}</h3>
                 <p className="card-description">{activity.description}</p>

@@ -1,6 +1,5 @@
 import React from "react";
-import LazyLoad from "react-lazyload";
-import Illustration from "../assets/experience.png";
+import Illustration from "../assets/experience.webp";
 import "../styles/Experience.css";
 
 const internshipsData = [
@@ -50,13 +49,18 @@ const Experience = () => {
         <div className="experience-text">
           <h2>Experiences</h2>
           <p className="experience-description">
-          Explore my diverse internship journey spanning mobile app development, React Native sessions, Geofencing technology, and project management systems. From my role as a Full Stack React Native Developer at Rapturous Technology to leading React Native sessions with the Software Development Cell & REDX-AI Club, each experience showcases my dedication to innovation and collaboration in software development. Discover my hands-on expertise across varied projects at CASCADE, K.J Somaiya Institute of Technology.
+            Explore my diverse internship journey spanning mobile app
+            development, React Native sessions, Geofencing technology, and
+            project management systems. From my role as a Full Stack React
+            Native Developer at Rapturous Technology to leading React Native
+            sessions with the Software Development Cell & REDX-AI Club, each
+            experience showcases my dedication to innovation and collaboration
+            in software development. Discover my hands-on expertise across
+            varied projects at CASCADE, K.J Somaiya Institute of Technology.
           </p>
         </div>
         <div className="experience-illustration">
-          <LazyLoad height={200}>
-            <img src={Illustration} alt="Experience" />
-          </LazyLoad>
+          <img src={Illustration} alt="Experience" />
         </div>
       </div>
       <div className="internships-section">
