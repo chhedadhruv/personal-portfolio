@@ -1,6 +1,8 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "../styles/Contact.css";
 import Illustration from "../assets/illustration.webp";
 
@@ -31,9 +33,13 @@ function Contact() {
     }
   };
 
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <div className="contact-container">
-      <div className="contact-form-container">
+      <div className="contact-form-container" data-aos="fade-right">
         <h2>Contact Me</h2>
         <p>
           Feel free to send me a message if you have any questions or
@@ -103,7 +109,7 @@ function Contact() {
           <p className="status">{status}</p>
         </form>
       </div>
-      <div className="contact-illustration">
+      <div className="contact-illustration" data-aos="fade-left">
         <img src={Illustration} alt="Contact Illustration" />
       </div>
     </div>

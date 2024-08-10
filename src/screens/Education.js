@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import School from "../assets/education/school.webp";
 import College from "../assets/education/college.webp";
 import University from "../assets/education/university.webp";
@@ -68,13 +70,18 @@ const activitiesData = [
 ];
 
 const EducationCards = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <div className="education-page">
       <section className="education-section">
-        <h2>Education</h2>
+        <h2 data-aos="fade-up">Education</h2>
         <div className="cards-container">
           {educationData.map((edu) => (
-            <div key={edu.id} className="card">
+            <div key={edu.id} className="card" data-aos="fade-up">
               <img src={edu.image} alt={edu.institution} />
               <div className="card-info">
                 <h3 className="card-title">{edu.institution}</h3>
@@ -88,10 +95,10 @@ const EducationCards = () => {
       </section>
 
       <section className="activities-section">
-        <h2>Co-Curricular Activities</h2>
+        <h2 data-aos="fade-up">Co-Curricular Activities</h2>
         <div className="cards-container">
           {activitiesData.map((activity) => (
-            <div key={activity.id} className="card">
+            <div key={activity.id} className="card" data-aos="fade-up">
               <img src={activity.image} alt={activity.title} />
               <div className="card-info">
                 <h3 className="card-title">{activity.title}</h3>

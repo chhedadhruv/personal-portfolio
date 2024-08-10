@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Illustration from "../assets/experience.webp";
 import "../styles/Experience.css";
 
@@ -43,10 +45,15 @@ const internshipsData = [
 ];
 
 const Experience = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <div className="experience-container">
       <div className="experience-header">
-        <div className="experience-text">
+        <div className="experience-text" data-aos="fade-right">
           <h2>Experiences</h2>
           <p className="experience-description">
             Explore my diverse internship journey spanning mobile app
@@ -59,7 +66,7 @@ const Experience = () => {
             varied projects at CASCADE, K.J Somaiya Institute of Technology.
           </p>
         </div>
-        <div className="experience-illustration">
+        <div className="experience-illustration" data-aos="fade-left">
           <img src={Illustration} alt="Experience" />
         </div>
       </div>
@@ -72,6 +79,7 @@ const Experience = () => {
               className={`timeline-block ${
                 index % 2 === 0 ? "timeline-block-right" : "timeline-block-left"
               }`}
+              data-aos="fade-up"
             >
               <div className="marker"></div>
               <div className="timeline-content">

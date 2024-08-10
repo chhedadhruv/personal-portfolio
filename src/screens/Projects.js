@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import RoboFriends from "../assets/projects/robofriends.webp";
 import TicTacToe from "../assets/projects/tictactoe.webp";
 import Tracka from "../assets/projects/tracka.webp";
@@ -65,9 +67,14 @@ const projectData = [
 ];
 
 const Projects = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <div className="project-page">
-      <header className="project-header">
+      <header className="project-header" data-aos="fade-up">
         <h1>My Projects</h1>
         <p>
           Explore my diverse projects showcasing expertise in web and app
@@ -76,7 +83,7 @@ const Projects = () => {
       </header>
       <section className="project-grid">
         {projectData.map((project) => (
-          <article className="project-card" key={project.id}>
+          <article className="project-card" key={project.id} data-aos="fade-up">
             <img
               src={project.image}
               alt={`Screenshot of ${project.title}`}
