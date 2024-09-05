@@ -7,6 +7,7 @@ const Education = lazy(() => import("./screens/Education"));
 const Experience = lazy(() => import("./screens/Experience"));
 const HomeScreen = lazy(() => import("./screens/HomeScreen"));
 const Projects = lazy(() => import("./screens/Projects"));
+const NotFound = lazy(() => import("./screens/NotFound"));
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/experience" element={<Experience />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
