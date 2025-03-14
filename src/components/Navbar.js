@@ -43,6 +43,9 @@ function Navbar() {
                     <Link to="/projects" className={isActive('/projects')} onClick={handleLinkClick}>Projects</Link>
                 </li>
                 <li>
+                    <Link to="/blogs" className={isActive('/blogs')} onClick={handleLinkClick}>Blogs</Link>
+                </li>
+                <li>
                     <Link to="/experience" className={isActive('/experience')} onClick={handleLinkClick}>Experience</Link>
                 </li>
                 <li>
