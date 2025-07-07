@@ -1,28 +1,36 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Error404 from '../assets/404.webp';
+import '../styles/NotFound.css';
 
 function NotFound() {
   return (
-    <div style={styles.container}>
-      <img style={styles.image} src={Error404} alt="404 Not Found" />
+    <div className="notfound-container">
+      <div className="notfound-content">
+        <div className="notfound-image-container">
+          <img className="notfound-image" src={Error404} alt="404 Not Found" />
+        </div>
+        <div className="notfound-text">
+          <h1 className="notfound-title">Page Not Found</h1>
+          <p className="notfound-description">
+            Oops! The page you're looking for doesn't exist. It might have been moved, 
+            deleted, or you entered the wrong URL.
+          </p>
+          <div className="notfound-actions">
+            <Link to="/" className="btn btn-primary">
+              Go Home
+            </Link>
+            <button 
+              onClick={() => window.history.back()} 
+              className="btn btn-secondary"
+            >
+              Go Back
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
-
-const styles = {
-  container: {
-    width: '100%',
-    height: '100vh',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '0 20px',
-  },
-  image: {
-    maxWidth: '90vw',
-    maxHeight: '80vh',
-    objectFit: 'contain',
-  },
-};
 
 export default NotFound;

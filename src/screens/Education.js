@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import SkeletonLoader from "../components/SkeletonLoader";
 import School from "../assets/education/school.webp";
 import College from "../assets/education/college.webp";
 import University from "../assets/education/university.webp";
@@ -70,10 +71,22 @@ const activitiesData = [
 ];
 
 const EducationCards = () => {
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
+    
+    // Simulate loading time for better UX
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 600);
+
+    return () => clearTimeout(timer);
   }, []);
+
+  if (loading) {
+    return <SkeletonLoader type="default" count={7} />;
+  }
 
   return (
     <div className="education-page">

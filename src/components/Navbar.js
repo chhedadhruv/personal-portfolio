@@ -4,6 +4,7 @@ import '../styles/Navbar.css';
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
 
     const handleMenuClick = () => {
@@ -21,19 +22,28 @@ function Navbar() {
             }
         };
 
+        const handleScroll = () => {
+            const isScrolled = window.scrollY > 20;
+            setScrolled(isScrolled);
+        };
+
         window.addEventListener('resize', handleResize);
+        window.addEventListener('scroll', handleScroll);
 
         return () => {
             window.removeEventListener('resize', handleResize);
+            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
     
     const isActive = (path) => location.pathname === path ? 'active' : '';
 
     return (
-        <nav>
+        <nav className={scrolled ? 'scrolled' : ''}>
             <div className="logo">
-                <Link to="/" className={isActive('/')} onClick={handleLinkClick}>Dhruv Chheda</Link>
+                <Link to="/" className={isActive('/')} onClick={handleLinkClick}>
+                    Dhruv Chheda
+                </Link>
             </div>
             <ul className={menuOpen ? 'nav-links nav-active' : 'nav-links'}>
                 <li>
@@ -55,11 +65,16 @@ function Navbar() {
                     <Link to="/contact" className={isActive('/contact')} onClick={handleLinkClick}>Contact</Link>
                 </li>
             </ul>
-            <div className="burger" onClick={handleMenuClick}>
+            <button 
+                className="burger" 
+                onClick={handleMenuClick}
+                aria-label="Toggle navigation menu"
+                aria-expanded={menuOpen}
+            >
                 <div className={menuOpen ? 'line1 line1-active' : 'line1'}></div>
                 <div className={menuOpen ? 'line2 line2-active' : 'line2'}></div>
                 <div className={menuOpen ? 'line3 line3-active' : 'line3'}></div>
-            </div>
+            </button>
         </nav>
     );
 }

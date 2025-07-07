@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import SkeletonLoader from "../components/SkeletonLoader";
 import RoboFriends from "../assets/projects/robofriends.webp";
 import TicTacToe from "../assets/projects/tictactoe.webp";
 import Tracka from "../assets/projects/tracka.webp";
@@ -67,10 +68,22 @@ const projectData = [
 ];
 
 const Projects = () => {
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
+    
+    // Simulate loading time for better UX
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 800);
+
+    return () => clearTimeout(timer);
   }, []);
+
+  if (loading) {
+    return <SkeletonLoader type="project" count={6} />;
+  }
 
   return (
     <div className="project-page">

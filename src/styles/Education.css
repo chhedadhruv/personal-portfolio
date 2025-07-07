@@ -1,13 +1,29 @@
 .education-page {
-  padding: 50px 20px;
-  background-color: #121212;
-  color: #e0e0e0;
+  padding: var(--space-3xl) var(--space-xl);
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  min-height: 100vh;
 }
 
+.education-section,
 .activities-section,
 .achievements-section,
 .certifications-section {
-  padding: 40px 20px;
+  padding: var(--space-3xl) 0;
+  position: relative;
+}
+
+.education-section::before,
+.activities-section::before,
+.achievements-section::before,
+.certifications-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-accent-gradient);
 }
 
 .education-section h2,
@@ -15,86 +31,234 @@
 .achievements-section h2,
 .certifications-section h2 {
   text-align: center;
-  margin-bottom: 40px;
-  font-size: 2.5rem;
-  color: #bb86fc;
-  border-bottom: 2px solid #bb86fc;
-  display: inline-block;
-  padding-bottom: 10px;
+  margin-bottom: var(--space-3xl);
+  font-size: var(--text-4xl);
+  font-weight: 800;
+  background: var(--color-accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  letter-spacing: -0.02em;
+}
+
+.education-section h2::after,
+.activities-section h2::after,
+.achievements-section h2::after,
+.certifications-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--color-accent-gradient);
+  border-radius: var(--radius-full);
 }
 
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-2xl);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .card {
-  background-color: #1e1e1e;
-  border-radius: 12px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
   overflow: hidden;
   text-decoration: none;
-  color: #e0e0e0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
   position: relative;
+  cursor: pointer;
+  group: education-card;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-accent-gradient);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-12px);
+  background: var(--color-bg-card-hover);
+  border-color: var(--color-border-light);
+  box-shadow: var(--shadow-xl), 0 25px 50px -12px rgba(139, 92, 246, 0.2);
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.card:hover::before {
+  opacity: 1;
 }
 
 .card img {
-  width: 100%;
-  height: 180px;
-  object-fit: contain;
-  background-color: #fff;
+  display: none;
 }
 
 .card-info {
-  padding: 20px;
-  background-color: #1e1e1e;
+  padding: var(--space-2xl);
+  background: inherit;
+  position: relative;
 }
 
 .card-title {
-  font-size: 1.5rem;
-  margin: 0;
-  color: #bb86fc;
+  font-size: var(--text-xl);
+  font-weight: 700;
+  margin: 0 0 var(--space-md) 0;
+  color: var(--color-text-primary);
+  line-height: 1.3;
+  transition: all var(--transition-fast);
 }
 
-.card-years,
+.card:hover .card-title {
+  color: var(--color-accent-primary);
+}
+
+.card-years {
+  font-size: var(--text-sm);
+  color: var(--color-text-tertiary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.card-years::before {
+  display: none;
+}
+
 .card-description {
-  font-size: 1rem;
-  color: #b0b0b0;
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Special styling for different card types */
+.activities-section .card-years::before {
+  display: none;
+}
+
+.achievements-section .card-years::before {
+  display: none;
+}
+
+.certifications-section .card-years::before {
+  display: none;
+}
+
+/* Animation for cards */
+.card {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-xl);
+  }
 }
 
 @media (max-width: 768px) {
   .education-page {
-    padding: 20px 10px;
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .education-section,
+  .activities-section,
+  .achievements-section,
+  .certifications-section {
+    padding: var(--space-2xl) 0;
   }
 
   .education-section h2,
   .activities-section h2,
   .achievements-section h2,
   .certifications-section h2 {
-    font-size: 2rem;
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
   }
 
   .card img {
-    height: 140px;
+    display: none;
   }
 
   .card-info {
-    padding: 15px;
+    padding: var(--space-xl);
   }
 
   .card-title {
-    font-size: 1.2rem;
+    font-size: var(--text-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .education-page {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .education-section h2,
+  .activities-section h2,
+  .achievements-section h2,
+  .certifications-section h2 {
+    font-size: var(--text-2xl);
+  }
+
+  .card img {
+    display: none;
+  }
+
+  .card-info {
+    padding: var(--space-lg);
+  }
+
+  .card-title {
+    font-size: var(--text-base);
   }
 
   .card-years,
   .card-description {
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
   }
 }

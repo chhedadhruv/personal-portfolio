@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Illustration from "../assets/experience.webp";
+import SkeletonLoader from "../components/SkeletonLoader";
 import "../styles/Experience.css";
 
 const internshipsData = [
@@ -45,10 +46,22 @@ const internshipsData = [
 ];
 
 const Experience = () => {
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
+    
+    // Simulate loading time for better UX
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
   }, []);
+
+  if (loading) {
+    return <SkeletonLoader type="default" count={3} />;
+  }
 
   return (
     <div className="experience-container">

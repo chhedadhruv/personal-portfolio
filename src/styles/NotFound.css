@@ -1,0 +1,226 @@
+.notfound-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-xl);
+  background: var(--color-bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.notfound-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 40%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 60%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+  z-index: 0;
+}
+
+.notfound-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3xl);
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.notfound-image-container {
+  flex: 1;
+  max-width: 500px;
+  text-align: center;
+}
+
+.notfound-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+  transition: transform var(--transition-slow);
+  animation: float 6s ease-in-out infinite;
+}
+
+.notfound-image:hover {
+  transform: scale(1.02);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.notfound-text {
+  flex: 1;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.notfound-title {
+  font-size: var(--text-5xl);
+  font-weight: 800;
+  background: var(--color-accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-lg);
+  letter-spacing: -0.02em;
+}
+
+.notfound-description {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-2xl);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.notfound-actions {
+  display: flex;
+  gap: var(--space-lg);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.notfound-actions .btn {
+  padding: var(--space-md) var(--space-2xl);
+  font-size: var(--text-base);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  min-width: 140px;
+}
+
+.notfound-actions .btn-primary {
+  background: var(--color-accent-gradient);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.notfound-actions .btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.notfound-actions .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl), var(--shadow-glow);
+  color: white;
+  text-decoration: none;
+}
+
+.notfound-actions .btn-primary:hover::before {
+  left: 100%;
+}
+
+.notfound-actions .btn-secondary {
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-border-light);
+}
+
+.notfound-actions .btn-secondary:hover {
+  border-color: var(--color-accent-primary);
+  color: var(--color-accent-primary);
+  transform: translateY(-2px);
+  background: rgba(139, 92, 246, 0.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .notfound-content {
+    gap: var(--space-2xl);
+  }
+  
+  .notfound-image {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .notfound-container {
+    padding: var(--space-lg);
+  }
+  
+  .notfound-content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-2xl);
+  }
+  
+  .notfound-title {
+    font-size: var(--text-4xl);
+  }
+  
+  .notfound-description {
+    font-size: var(--text-base);
+  }
+  
+  .notfound-image {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notfound-container {
+    padding: var(--space-md);
+  }
+  
+  .notfound-title {
+    font-size: var(--text-3xl);
+  }
+  
+  .notfound-description {
+    font-size: var(--text-sm);
+  }
+  
+  .notfound-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .notfound-actions .btn {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .notfound-image {
+    max-width: 240px;
+  }
+} 

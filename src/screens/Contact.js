@@ -1,8 +1,9 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import SkeletonLoader from "../components/SkeletonLoader";
 import "../styles/Contact.css";
 import Illustration from "../assets/illustration.webp";
 
@@ -15,6 +16,7 @@ function Contact() {
   } = useForm();
   const form = useRef();
   const [status, setStatus] = React.useState("");
+  const [loading, setLoading] = useState(true);
 
   const onSubmit = async (data) => {
     setStatus("Sending...");
@@ -35,7 +37,18 @@ function Contact() {
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
+    
+    // Simulate loading time for better UX
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 400);
+
+    return () => clearTimeout(timer);
   }, []);
+
+  if (loading) {
+    return <SkeletonLoader type="default" count={2} />;
+  }
 
   return (
     <div className="contact-container">

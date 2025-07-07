@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import LoadingSpinner from "./components/LoadingSpinner";
 
 const Contact = lazy(() => import("./screens/Contact"));
 const Education = lazy(() => import("./screens/Education"));
@@ -14,7 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<LoadingSpinner />}>
         <Routes>
           <Route path="/" element={<HomeScreen />} />
           <Route path="/education" element={<Education />} />

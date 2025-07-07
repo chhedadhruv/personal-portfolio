@@ -64,4 +64,4 @@ The portfolio is live at [dhruvchheda.com](https://dhruvchheda.com). Feel free t
 
 ---
 
-Thank you for visiting my portfolio! 🚀
+Thank you for visiting my portfolio!
