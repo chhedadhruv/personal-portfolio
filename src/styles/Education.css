@@ -1,65 +1,104 @@
-.education-page {
+.education-container {
   padding: var(--space-3xl) var(--space-xl);
+  max-width: 1200px;
+  margin: 0 auto;
   background: var(--color-bg-primary);
-  color: var(--color-text-primary);
   min-height: 100vh;
 }
 
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3xl);
+  gap: var(--space-2xl);
+}
+
+.education-text {
+  flex: 1;
+}
+
+.education-text h2 {
+  font-size: var(--text-5xl);
+  font-weight: 800;
+  background: var(--color-accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-lg);
+  letter-spacing: -0.02em;
+}
+
+.education-description {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  max-width: 500px;
+}
+
+.education-illustration {
+  flex: 1;
+  text-align: right;
+  position: relative;
+}
+
+.education-illustration img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-xl);
+  transition: all var(--transition-slow);
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.2));
+}
+
+.education-illustration img:hover {
+  transform: scale(1.02) rotate(-1deg);
+  box-shadow: var(--shadow-xl), var(--shadow-glow);
+}
+
 .education-section,
-.activities-section,
-.achievements-section,
-.certifications-section {
-  padding: var(--space-3xl) 0;
+.activities-section {
+  margin-top: var(--space-3xl);
   position: relative;
 }
 
 .education-section::before,
-.activities-section::before,
-.achievements-section::before,
-.certifications-section::before {
+.activities-section::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: -20px;
   left: 0;
   right: 0;
   height: 2px;
   background: var(--color-accent-gradient);
 }
 
-.education-section h2,
-.activities-section h2,
-.achievements-section h2,
-.certifications-section h2 {
+.education-section h3,
+.activities-section h3 {
   text-align: center;
-  margin-bottom: var(--space-3xl);
   font-size: var(--text-4xl);
-  font-weight: 800;
-  background: var(--color-accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-weight: 700;
+  margin-bottom: var(--space-2xl);
+  color: var(--color-text-primary);
   position: relative;
-  letter-spacing: -0.02em;
 }
 
-.education-section h2::after,
-.activities-section h2::after,
-.achievements-section h2::after,
-.certifications-section h2::after {
+.education-section h3::after,
+.activities-section h3::after {
   content: '';
   position: absolute;
-  bottom: -12px;
+  bottom: -8px;
   left: 50%;
   transform: translateX(-50%);
   width: 80px;
-  height: 4px;
+  height: 3px;
   background: var(--color-accent-gradient);
   border-radius: var(--radius-full);
 }
 
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: var(--space-2xl);
   max-width: 1200px;
   margin: 0 auto;
@@ -76,7 +115,7 @@
   transition: all var(--transition-normal);
   position: relative;
   cursor: pointer;
-  group: education-card;
+  height: 100%;
 }
 
 .card::before {
@@ -104,20 +143,20 @@
   opacity: 1;
 }
 
-.card img {
-  display: none;
-}
-
 .card-info {
   padding: var(--space-2xl);
   background: inherit;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  height: 100%;
 }
 
 .card-title {
   font-size: var(--text-xl);
   font-weight: 700;
-  margin: 0 0 var(--space-md) 0;
+  margin: 0;
   color: var(--color-text-primary);
   line-height: 1.3;
   transition: all var(--transition-fast);
@@ -127,20 +166,28 @@
   color: var(--color-accent-primary);
 }
 
+.card-degree {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  margin: 0;
+}
+
 .card-years {
   font-size: var(--text-sm);
   color: var(--color-text-tertiary);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: var(--space-sm);
+  margin: 0;
   display: flex;
   align-items: center;
   gap: var(--space-xs);
 }
 
 .card-years::before {
-  display: none;
+  content: '📅';
+  margin-right: var(--space-xs);
 }
 
 .card-description {
@@ -148,19 +195,56 @@
   color: var(--color-text-secondary);
   line-height: 1.6;
   margin: 0;
+  flex-grow: 1;
 }
 
-/* Special styling for different card types */
-.activities-section .card-years::before {
-  display: none;
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--color-accent-gradient);
+  color: white;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--text-sm);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  align-self: flex-start;
+  margin-top: auto;
 }
 
-.achievements-section .card-years::before {
-  display: none;
+.card-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
 }
 
-.certifications-section .card-years::before {
-  display: none;
+.card-link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), 0 10px 25px -5px rgba(139, 92, 246, 0.3);
+  color: white;
+}
+
+.card-link:hover::before {
+  left: 100%;
+}
+
+.card-link::after {
+  content: '→';
+  margin-left: var(--space-xs);
+  transition: transform var(--transition-fast);
+}
+
+.card-link:hover::after {
+  transform: translateX(4px);
 }
 
 /* Animation for cards */
@@ -188,40 +272,34 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-  .cards-container {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+@media screen and (max-width: 1024px) {
+  .education-header {
     gap: var(--space-xl);
   }
 }
 
-@media (max-width: 768px) {
-  .education-page {
+@media screen and (max-width: 768px) {
+  .education-container {
     padding: var(--space-2xl) var(--space-lg);
   }
 
-  .education-section,
-  .activities-section,
-  .achievements-section,
-  .certifications-section {
-    padding: var(--space-2xl) 0;
+  .education-header {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-xl);
   }
 
-  .education-section h2,
-  .activities-section h2,
-  .achievements-section h2,
-  .certifications-section h2 {
-    font-size: var(--text-3xl);
-    margin-bottom: var(--space-2xl);
+  .education-text h2 {
+    font-size: var(--text-4xl);
+  }
+
+  .education-illustration {
+    text-align: center;
   }
 
   .cards-container {
     grid-template-columns: 1fr;
     gap: var(--space-xl);
-  }
-
-  .card img {
-    display: none;
   }
 
   .card-info {
@@ -231,22 +309,29 @@
   .card-title {
     font-size: var(--text-lg);
   }
+
+  .education-section h3,
+  .activities-section h3 {
+    font-size: var(--text-3xl);
+  }
 }
 
-@media (max-width: 480px) {
-  .education-page {
+@media screen and (max-width: 480px) {
+  .education-container {
     padding: var(--space-xl) var(--space-md);
   }
 
-  .education-section h2,
-  .activities-section h2,
-  .achievements-section h2,
-  .certifications-section h2 {
-    font-size: var(--text-2xl);
+  .education-text h2 {
+    font-size: var(--text-3xl);
   }
 
-  .card img {
-    display: none;
+  .education-description {
+    font-size: var(--text-base);
+  }
+
+  .education-section h3,
+  .activities-section h3 {
+    font-size: var(--text-2xl);
   }
 
   .card-info {

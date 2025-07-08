@@ -5,7 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import SkeletonLoader from "../components/SkeletonLoader";
 import "../styles/Contact.css";
-import Illustration from "../assets/illustration.webp";
+import Illustration from "../assets/contact-illustration.webp";
 
 function Contact() {
   const {

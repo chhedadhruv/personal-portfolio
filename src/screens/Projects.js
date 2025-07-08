@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Illustration from "../assets/projects-illustration.webp";
 import SkeletonLoader from "../components/SkeletonLoader";
-import RoboFriends from "../assets/projects/robofriends.webp";
-import TicTacToe from "../assets/projects/tictactoe.webp";
-import Tracka from "../assets/projects/tracka.webp";
-import Resume from "../assets/projects/resume.webp";
-import Todo from "../assets/projects/todo.webp";
-import Quote from "../assets/projects/quote.webp";
 import "../styles/Project.css";
 
 const projectData = [
@@ -17,7 +12,6 @@ const projectData = [
     description:
       "RoboFriends is a React web application that allows users to search for robots and generate unique robot cards. It fetches data from Google Sheets and uses Robohash to create personalized robot images.",
     technologies: ["React", "React Bootstrap", "Robohash"],
-    image: RoboFriends,
     link: "https://github.com/chhedadhruv/Robofriends",
   },
   {
@@ -26,7 +20,6 @@ const projectData = [
     description:
       "Classic Tic Tac Toe game built with React. This real-time web application features an intuitive interface for two-player gameplay and demonstrates my React skills.",
     technologies: ["React"],
-    image: TicTacToe,
     link: "https://github.com/chhedadhruv/TicTacToe",
   },
   {
@@ -35,7 +28,6 @@ const projectData = [
     description:
       "TrackaExpense is a React Native and Firebase-based expense tracking application. It offers graphical insights, expense tracking, and a split function to manage shared costs efficiently.",
     technologies: ["React Native", "Firebase"],
-    image: Tracka,
     link: "https://github.com/chhedadhruv/TrackaExpense",
   },
   {
@@ -44,7 +36,6 @@ const projectData = [
     description:
       "SkillFlex is a resume builder that allows users to create professional resumes with customizable sections and stylish templates. Built with React, Firebase, and React Bootstrap, it offers secure and user-friendly resume creation.",
     technologies: ["React", "Firebase", "React Bootstrap"],
-    image: Resume,
     link: "https://github.com/chhedadhruv/Resume-Maker",
   },
   {
@@ -53,7 +44,6 @@ const projectData = [
     description:
       "Todo is a React Native and Firebase-powered task management application. It features real-time task updates and a clean interface to manage tasks efficiently across devices.",
     technologies: ["React Native", "Firebase"],
-    image: Todo,
     link: "https://github.com/chhedadhruv/my_todo_app",
   },
   {
@@ -62,7 +52,6 @@ const projectData = [
     description:
       "This React Native app generates inspirational quotes fetched from an API. It includes features like text-to-speech, copy-to-clipboard, and tweet functionalities for a seamless user experience.",
     technologies: ["React Native"],
-    image: Quote,
     link: "https://github.com/chhedadhruv/Random-Quote-Generator",
   },
 ];
@@ -86,24 +75,27 @@ const Projects = () => {
   }
 
   return (
-    <div className="project-page">
-      <header className="project-header" data-aos="fade-up">
-        <h1>My Projects</h1>
-        <p>
-          Explore my diverse projects showcasing expertise in web and app
-          development using modern technologies.
-        </p>
-      </header>
+    <div className="project-container">
+      <div className="project-header">
+        <div className="project-text" data-aos="fade-right">
+          <h2>My Projects</h2>
+          <p className="project-description">
+            Explore my diverse projects showcasing expertise in web and app
+            development using modern technologies. Each project demonstrates
+            my commitment to creating innovative solutions and leveraging
+            cutting-edge frameworks to deliver exceptional user experiences.
+          </p>
+        </div>
+        <div className="project-illustration" data-aos="fade-left">
+          <img src={Illustration} alt="Projects" />
+        </div>
+      </div>
+
       <section className="project-grid">
         {projectData.map((project) => (
           <article className="project-card" key={project.id} data-aos="fade-up">
-            <img
-              src={project.image}
-              alt={`Screenshot of ${project.title}`}
-              className="project-image"
-            />
             <div className="project-content">
-              <h2 className="project-title">{project.title}</h2>
+              <h3 className="project-title">{project.title}</h3>
               <p className="project-description">{project.description}</p>
               <ul className="project-technologies">
                 {project.technologies.map((tech, index) => (

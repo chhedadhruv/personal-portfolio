@@ -160,8 +160,8 @@
 }
 
 .hero-photo {
-  width: 350px;
-  height: 350px;
+  width: 375px;
+  height: 375px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid transparent;
