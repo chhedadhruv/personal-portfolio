@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Illustration from "../assets/experience-illustration.webp";
+// Illustration now loaded from public/illustrations
 import SkeletonLoader from "../components/SkeletonLoader";
+import SEO from "../components/SEO";
+import StructuredData from "../components/StructuredData";
+import { seoData } from "../data/seoData";
 import "../styles/Experience.css";
 
 const internshipsData = [
@@ -64,7 +67,10 @@ const Experience = () => {
   }
 
   return (
-    <div className="experience-container">
+    <>
+      <SEO {...seoData.experience} />
+      <StructuredData type="experience" data={internshipsData} />
+      <div className="experience-container">
       <div className="experience-header">
         <div className="experience-text" data-aos="fade-right">
           <h2>Experiences</h2>
@@ -80,7 +86,7 @@ const Experience = () => {
           </p>
         </div>
         <div className="experience-illustration" data-aos="fade-left">
-          <img src={Illustration} alt="Experience" />
+          <img src="/illustrations/experience-illustration.webp" alt="Experience" />
         </div>
       </div>
       <div className="internships-section">
@@ -108,6 +114,7 @@ const Experience = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

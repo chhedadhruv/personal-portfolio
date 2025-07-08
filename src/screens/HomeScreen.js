@@ -19,6 +19,8 @@ import {
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Resume from "../assets/Dhruv_Chheda_Resume.pdf";
+import SEO from "../components/SEO";
+import { seoData } from "../data/seoData";
 import "../styles/HomeScreen.css";
 
 function HomeScreen() {
@@ -31,11 +33,13 @@ function HomeScreen() {
 
   return (
     <>
-      <section className="hero" data-aos="fade-up">
-        <div className="hero-content">
-          <div className="info">
-            <h1 className="hero-title">Dhruv Chheda</h1>
-            <h2 className="hero-subtitle">Web & App Developer</h2>
+      <SEO {...seoData.home} />
+      <main>
+        <section className="hero" data-aos="fade-up">
+          <div className="hero-content">
+            <div className="info">
+              <h1 className="hero-title">Dhruv Chheda</h1>
+              <h2 className="hero-subtitle">Web & App Developer</h2>
             <p className="hero-description">
               I’m a skilled web and app developer specializing in JavaScript,
               React, React Native, .NET, and MS SQL Server. I create responsive,
@@ -92,11 +96,12 @@ function HomeScreen() {
         ref={skillsRef}
         className={`skills-section ${isVisible ? "visible" : ""}`}
         data-aos="fade-up"
+        aria-label="Technical Skills"
       >
-        <h2 className="skills-title">Skills</h2>
+        <h2 className="skills-title">Technical Skills</h2>
         <div className="skills-category" data-aos="fade-up">
           <h3>Web and App Development</h3>
-          <div className="skills-list">
+          <div className="skills-list" role="list">
             <div className="skill-card" data-aos="flip-left">
               <SiHtml5 className="skill-icon" />
               <p>HTML</p>
@@ -172,6 +177,7 @@ function HomeScreen() {
           </div>
         </div>
       </section>
+      </main>
     </>
   );
 }

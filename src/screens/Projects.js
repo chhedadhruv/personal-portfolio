@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Illustration from "../assets/projects-illustration.webp";
+// Illustration now loaded from public/illustrations
 import SkeletonLoader from "../components/SkeletonLoader";
+import SEO from "../components/SEO";
+import StructuredData from "../components/StructuredData";
+import { seoData } from "../data/seoData";
 import "../styles/Project.css";
 
 const projectData = [
@@ -75,7 +78,10 @@ const Projects = () => {
   }
 
   return (
-    <div className="project-container">
+    <>
+      <SEO {...seoData.projects} />
+      <StructuredData type="projects" data={projectData} />
+      <div className="project-container">
       <div className="project-header">
         <div className="project-text" data-aos="fade-right">
           <h2>My Projects</h2>
@@ -87,7 +93,7 @@ const Projects = () => {
           </p>
         </div>
         <div className="project-illustration" data-aos="fade-left">
-          <img src={Illustration} alt="Projects" />
+          <img src="/illustrations/projects-illustration.webp" alt="Projects" />
         </div>
       </div>
 
@@ -117,6 +123,7 @@ const Projects = () => {
         ))}
       </section>
     </div>
+    </>
   );
 };
 

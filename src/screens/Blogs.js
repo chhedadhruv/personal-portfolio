@@ -3,8 +3,11 @@ import BlogCard from "../components/BlogCard";
 import "../styles/Blogs.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import BlogIllustration from "../assets/blog-illustration.webp";
+// Illustration now loaded from public/illustrations
 import SkeletonLoader from "../components/SkeletonLoader";
+import SEO from "../components/SEO";
+import StructuredData from "../components/StructuredData";
+import { seoData } from "../data/seoData";
 import blogsData from "../data/blogs.json";
 
 const Blogs = () => {
@@ -32,7 +35,10 @@ const Blogs = () => {
   }
 
   return (
-    <div className="blogs-container">
+    <>
+      <SEO {...seoData.blogs} />
+      <StructuredData type="blog" data={blogs} />
+      <div className="blogs-container">
       <div className="blogs-header" data-aos="fade-up">
         <div className="blogs-text">
           <h1 className="blogs-title">Blog Posts</h1>
@@ -42,7 +48,7 @@ const Blogs = () => {
           </p>
         </div>
         <div className="blogs-illustration">
-          <img src={BlogIllustration} alt="Blogging illustration" />
+          <img src="/illustrations/blog-illustration.webp" alt="Blogging illustration" />
         </div>
       </div>
       <div className="blogs-grid">
@@ -53,6 +59,7 @@ const Blogs = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

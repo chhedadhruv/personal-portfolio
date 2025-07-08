@@ -4,8 +4,10 @@ import emailjs from "@emailjs/browser";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import SkeletonLoader from "../components/SkeletonLoader";
+import SEO from "../components/SEO";
+import { seoData } from "../data/seoData";
 import "../styles/Contact.css";
-import Illustration from "../assets/contact-illustration.webp";
+// Illustration now loaded from public/illustrations
 
 function Contact() {
   const {
@@ -51,7 +53,9 @@ function Contact() {
   }
 
   return (
-    <div className="contact-container">
+    <>
+      <SEO {...seoData.contact} />
+      <div className="contact-container">
       <div className="contact-form-container" data-aos="fade-right">
         <h2>Contact Me</h2>
         <p>
@@ -123,9 +127,10 @@ function Contact() {
         </form>
       </div>
       <div className="contact-illustration" data-aos="fade-left">
-        <img src={Illustration} alt="Contact Illustration" />
+        <img src="/illustrations/contact-illustration.webp" alt="Contact Illustration" />
       </div>
     </div>
+    </>
   );
 }
 

@@ -46,6 +46,13 @@
 
     <!-- Preload LCP Image -->
     <link rel="preload" href="%PUBLIC_URL%/dhruv-chheda.webp" as="image" />
+    
+    <!-- Preload other critical resources -->
+    <link rel="preload" href="%PUBLIC_URL%/illustrations/experience-illustration.webp" as="image" />
+    <link rel="preload" href="%PUBLIC_URL%/illustrations/projects-illustration.webp" as="image" />
+    <link rel="preload" href="%PUBLIC_URL%/illustrations/blog-illustration.webp" as="image" />
+    <link rel="preload" href="%PUBLIC_URL%/illustrations/education-illustration.webp" as="image" />
+    <link rel="preload" href="%PUBLIC_URL%/illustrations/contact-illustration.webp" as="image" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -55,38 +62,30 @@
       as="style"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
     <noscript>
       <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
         rel="stylesheet"
       />
     </noscript>
+    
+    <!-- DNS prefetch for external domains -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//medium.com" />
+    <link rel="dns-prefetch" href="//github.com" />
+    <link rel="dns-prefetch" href="//linkedin.com" />
 
     <!-- Title -->
     <title>Dhruv Chheda - Web & App Developer</title>
 
-    <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org/",
-        "@type": "Person",
-        "name": "Dhruv Chheda",
-        "jobTitle": "Web and App Developer",
-        "url": "https://www.dhruvchheda.com",
-        "sameAs": [
-          "https://www.linkedin.com/in/dhruv-chheda/",
-          "https://www.instagram.com/chheda.dhruv3/",
-          "https://x.com/ChhedaDhruv4",
-          "https://github.com/chhedadhruv"
-        ],
-        "image": "https://dhruvchheda.com/dhruv-chheda.webp",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+918097217836",
-          "contactType": "Personal"
-        }
-      }
-    </script>
+    <!-- Schema.org JSON-LD will be handled dynamically by React components -->
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
