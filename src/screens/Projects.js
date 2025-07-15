@@ -11,14 +11,6 @@ import "../styles/Project.css";
 const projectData = [
   {
     id: 1,
-    title: "TrackaExpense - Personal Finance Manager",
-    description:
-      "A comprehensive, ad-free personal finance app built with React Native and Firebase. Features expense tracking, income management, savings goals, bill splitting, and graphical insights.",
-    technologies: ["React Native", "Firebase", "React Navigation", "Chart Kit"],
-    link: "https://github.com/chhedadhruv/TrackaExpense",
-  },
-  {
-    id: 2,
     title: "MyTodo - Complete Task Management Ecosystem",
     description:
       "A modern, full-stack task management solution with web, mobile, and API. Features JWT authentication, real-time sync, dark/light themes, and comprehensive task management with priority levels and due date tracking.",
@@ -26,20 +18,28 @@ const projectData = [
     link: "https://github.com/chhedadhruv/myTodo",
   },
   {
-    id: 3,
-    title: "Quotify - Daily Inspiration App",
+    id: 2,
+    title: "TrackaExpense - Personal Finance Manager",
     description:
-      "A beautiful React Native app with 2,127+ inspiring quotes, smart category filtering, home screen widgets, and elegant design. Works completely offline with instant quote loading and cross-platform support.",
-    technologies: ["React Native", "TypeScript", "WidgetKit", "AsyncStorage"],
-    link: "https://github.com/chhedadhruv/quotify",
+      "A comprehensive, ad-free personal finance app built with React Native and Firebase. Features expense tracking, income management, savings goals, bill splitting, and graphical insights.",
+    technologies: ["React Native", "Firebase", "React Navigation", "Chart Kit"],
+    link: "https://github.com/chhedadhruv/TrackaExpense",
   },
   {
-    id: 4,
+    id: 3,
     title: "Quote API",
     description:
       "A modern, secure REST API for inspirational quotes with advanced search, tag-based filtering, rate limiting, and comprehensive documentation. Deployed on personal home server with Docker and Cloudflare tunnel integration.",
     technologies: ["Node.js", "Express", "Docker", "Cloudflare", "PostgreSQL"],
     link: "https://github.com/chhedadhruv/inspirational-quotes-api",
+  },
+  {
+    id: 4,
+    title: "Quotify - Daily Inspiration App",
+    description:
+      "A beautiful React Native app with 2,127+ inspiring quotes, smart category filtering, home screen widgets, and elegant design. Works completely offline with instant quote loading and cross-platform support.",
+    technologies: ["React Native", "TypeScript", "WidgetKit", "AsyncStorage"],
+    link: "https://github.com/chhedadhruv/quotify",
   },
   {
     id: 5,
