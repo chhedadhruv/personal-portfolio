@@ -354,6 +354,10 @@
     max-width: 100%;
   }
 
+  .download-resume {
+    align-self: center;
+  }
+
   .hero-photo {
     width: 250px;
     height: 250px;
@@ -397,6 +401,10 @@
     width: 45px;
     height: 45px;
     font-size: var(--text-lg);
+  }
+
+  .download-resume {
+    align-self: center;
   }
 
   .skills-list {

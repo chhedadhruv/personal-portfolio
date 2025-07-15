@@ -15,6 +15,12 @@ import {
   SiAdobepremierepro,
   SiFirebase,
   SiGit,
+  SiTypescript,
+  SiNodedotjs,
+  SiPostgresql,
+  SiDocker,
+  SiVite,
+  SiNginx,
 } from "react-icons/si";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -39,13 +45,12 @@ function HomeScreen() {
           <div className="hero-content">
             <div className="info">
               <h1 className="hero-title">Dhruv Chheda</h1>
-              <h2 className="hero-subtitle">Web & App Developer</h2>
+              <h2 className="hero-subtitle">Full-Stack Developer & Mobile App Creator</h2>
             <p className="hero-description">
-              I’m a skilled web and app developer specializing in JavaScript,
-              React, React Native, .NET, and MS SQL Server. I create responsive,
-              high-performance applications with a focus on user-friendly
-              solutions. My expertise includes the latest technologies and best
-              practices in web and app development.
+              I'm a passionate full-stack developer specializing in modern web applications, 
+              cross-platform mobile apps, and scalable backend systems. With expertise in 
+              React, React Native, Node.js, and cloud technologies, I create comprehensive 
+              solutions with clean code and modern best practices.
             </p>
 
             <div className="social-media">
@@ -86,7 +91,7 @@ function HomeScreen() {
           </div>
           <img
             src={`${process.env.PUBLIC_URL}/dhruv-chheda.webp`}
-            alt="Dhruv Chheda, Web and App Developer"
+            alt="Dhruv Chheda, Full-Stack Developer and Mobile App Creator"
             className="hero-photo"
           />
         </div>
@@ -100,7 +105,7 @@ function HomeScreen() {
       >
         <h2 className="skills-title">Technical Skills</h2>
         <div className="skills-category" data-aos="fade-up">
-          <h3>Web and App Development</h3>
+          <h3>Frontend Development</h3>
           <div className="skills-list" role="list">
             <div className="skill-card" data-aos="flip-left">
               <SiHtml5 className="skill-icon" />
@@ -115,6 +120,10 @@ function HomeScreen() {
               <p>JavaScript</p>
             </div>
             <div className="skill-card" data-aos="flip-left">
+              <SiTypescript className="skill-icon" />
+              <p>TypeScript</p>
+            </div>
+            <div className="skill-card" data-aos="flip-left">
               <SiReact className="skill-icon" />
               <p>React</p>
             </div>
@@ -123,18 +132,58 @@ function HomeScreen() {
               <p>React Native</p>
             </div>
             <div className="skill-card" data-aos="flip-left">
-              <SiDotnet className="skill-icon" />
-              <p>.NET</p>
-            </div>
-            <div className="skill-card" data-aos="flip-left">
-              <SiMicrosoftsqlserver className="skill-icon" />
-              <p>MS SQL Server</p>
+              <SiVite className="skill-icon" />
+              <p>Vite</p>
             </div>
           </div>
         </div>
 
         <div className="skills-category" data-aos="fade-up">
-          <h3>Designing Skills</h3>
+          <h3>Backend & Database</h3>
+          <div className="skills-list">
+            <div className="skill-card" data-aos="flip-left">
+              <SiNodedotjs className="skill-icon" />
+              <p>Node.js</p>
+            </div>
+            <div className="skill-card" data-aos="flip-left">
+              <SiDotnet className="skill-icon" />
+              <p>.NET</p>
+            </div>
+            <div className="skill-card" data-aos="flip-left">
+              <SiPostgresql className="skill-icon" />
+              <p>PostgreSQL</p>
+            </div>
+            <div className="skill-card" data-aos="flip-left">
+              <SiMicrosoftsqlserver className="skill-icon" />
+              <p>MS SQL Server</p>
+            </div>
+            <div className="skill-card" data-aos="flip-left">
+              <SiFirebase className="skill-icon" />
+              <p>Firebase</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="skills-category" data-aos="fade-up">
+          <h3>DevOps & Deployment</h3>
+          <div className="skills-list">
+            <div className="skill-card" data-aos="flip-left">
+              <SiDocker className="skill-icon" />
+              <p>Docker</p>
+            </div>
+            <div className="skill-card" data-aos="flip-left">
+              <SiNginx className="skill-icon" />
+              <p>Nginx</p>
+            </div>
+            <div className="skill-card" data-aos="flip-left">
+              <SiGit className="skill-icon" />
+              <p>Git</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="skills-category" data-aos="fade-up">
+          <h3>Design & Creative Tools</h3>
           <div className="skills-list">
             <div className="skill-card" data-aos="flip-left">
               <SiCanva className="skill-icon" />
@@ -159,20 +208,6 @@ function HomeScreen() {
             <div className="skill-card" data-aos="flip-left">
               <SiAdobepremierepro className="skill-icon" />
               <p>Premiere Pro</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="skills-category" data-aos="fade-up">
-          <h3>Tools</h3>
-          <div className="skills-list">
-            <div className="skill-card" data-aos="flip-left">
-              <SiFirebase className="skill-icon" />
-              <p>Firebase</p>
-            </div>
-            <div className="skill-card" data-aos="flip-left">
-              <SiGit className="skill-icon" />
-              <p>Git</p>
             </div>
           </div>
         </div>

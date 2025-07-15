@@ -11,51 +11,51 @@ import "../styles/Project.css";
 const projectData = [
   {
     id: 1,
-    title: "RoboFriends",
+    title: "TrackaExpense - Personal Finance Manager",
     description:
-      "RoboFriends is a React web application that allows users to search for robots and generate unique robot cards. It fetches data from Google Sheets and uses Robohash to create personalized robot images.",
-    technologies: ["React", "React Bootstrap", "Robohash"],
-    link: "https://github.com/chhedadhruv/Robofriends",
-  },
-  {
-    id: 2,
-    title: "Tic Tac Toe Game",
-    description:
-      "Classic Tic Tac Toe game built with React. This real-time web application features an intuitive interface for two-player gameplay and demonstrates my React skills.",
-    technologies: ["React"],
-    link: "https://github.com/chhedadhruv/TicTacToe",
-  },
-  {
-    id: 3,
-    title: "Expense Tracking App",
-    description:
-      "TrackaExpense is a React Native and Firebase-based expense tracking application. It offers graphical insights, expense tracking, and a split function to manage shared costs efficiently.",
-    technologies: ["React Native", "Firebase"],
+      "A comprehensive, ad-free personal finance app built with React Native and Firebase. Features expense tracking, income management, savings goals, bill splitting, and graphical insights.",
+    technologies: ["React Native", "Firebase", "React Navigation", "Chart Kit"],
     link: "https://github.com/chhedadhruv/TrackaExpense",
   },
   {
-    id: 4,
-    title: "Resume Maker",
+    id: 2,
+    title: "MyTodo - Complete Task Management Ecosystem",
     description:
-      "SkillFlex is a resume builder that allows users to create professional resumes with customizable sections and stylish templates. Built with React, Firebase, and React Bootstrap, it offers secure and user-friendly resume creation.",
-    technologies: ["React", "Firebase", "React Bootstrap"],
-    link: "https://github.com/chhedadhruv/Resume-Maker",
+      "A modern, full-stack task management solution with web, mobile, and API. Features JWT authentication, real-time sync, dark/light themes, and comprehensive task management with priority levels and due date tracking.",
+    technologies: ["React", "React Native", "Node.js", "TypeScript", "PostgreSQL", "Docker", "Nginx"],
+    link: "https://github.com/chhedadhruv/myTodo",
+  },
+  {
+    id: 3,
+    title: "Quotify - Daily Inspiration App",
+    description:
+      "A beautiful React Native app with 2,127+ inspiring quotes, smart category filtering, home screen widgets, and elegant design. Works completely offline with instant quote loading and cross-platform support.",
+    technologies: ["React Native", "TypeScript", "WidgetKit", "AsyncStorage"],
+    link: "https://github.com/chhedadhruv/quotify",
+  },
+  {
+    id: 4,
+    title: "Quote API",
+    description:
+      "A modern, secure REST API for inspirational quotes with advanced search, tag-based filtering, rate limiting, and comprehensive documentation. Deployed on personal home server with Docker and Cloudflare tunnel integration.",
+    technologies: ["Node.js", "Express", "Docker", "Cloudflare", "PostgreSQL"],
+    link: "https://github.com/chhedadhruv/inspirational-quotes-api",
   },
   {
     id: 5,
-    title: "Todo App",
+    title: "TrueYouTeller - Personality Test Platform",
     description:
-      "Todo is a React Native and Firebase-powered task management application. It features real-time task updates and a clean interface to manage tasks efficiently across devices.",
-    technologies: ["React Native", "Firebase"],
-    link: "https://github.com/chhedadhruv/my_todo_app",
+      "A delightful personality test website that reveals 16 distinct personality types with spirit animals, career insights, and relationship guidance. Features mini-games and comprehensive personality analysis.",
+    technologies: ["React", "Vite", "Firebase", "TypeScript"],
+    link: "https://github.com/chhedadhruv/trueyouteller",
   },
   {
     id: 6,
-    title: "Random Quote Generator",
+    title: "RoboFriends - Interactive Robot Gallery",
     description:
-      "This React Native app generates inspirational quotes fetched from an API. It includes features like text-to-speech, copy-to-clipboard, and tweet functionalities for a seamless user experience.",
-    technologies: ["React Native"],
-    link: "https://github.com/chhedadhruv/Random-Quote-Generator",
+      "A modern React web application showcasing unique robot friends with smart search capabilities, real-time suggestions, and beautiful UI animations. Features Google Sheets integration and Robohash avatars.",
+    technologies: ["React", "React Bootstrap", "Google Sheets API", "Robohash"],
+    link: "https://github.com/chhedadhruv/Robofriends",
   },
 ];
 
@@ -86,10 +86,10 @@ const Projects = () => {
         <div className="project-text" data-aos="fade-right">
           <h2>My Projects</h2>
           <p className="project-description">
-            Explore my diverse projects showcasing expertise in web and app
-            development using modern technologies. Each project demonstrates
-            my commitment to creating innovative solutions and leveraging
-            cutting-edge frameworks to deliver exceptional user experiences.
+            Explore my diverse portfolio of full-stack applications, mobile apps, and APIs 
+            built with modern technologies. From complete task management ecosystems to 
+            personality testing platforms, each project showcases my expertise in creating 
+            scalable, user-friendly solutions across web, mobile, and backend development.
           </p>
         </div>
         <div className="project-illustration" data-aos="fade-left">
