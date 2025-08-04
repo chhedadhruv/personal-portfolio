@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import SkeletonLoader from "../components/SkeletonLoader";
 import SEO from "../components/SEO";
 import StructuredData from "../components/StructuredData";
+import BreadcrumbStructuredData from "../components/BreadcrumbStructuredData";
 import { seoData } from "../data/seoData";
 import "../styles/Project.css";
 
@@ -81,6 +82,10 @@ const Projects = () => {
     <>
       <SEO {...seoData.projects} />
       <StructuredData type="projects" data={projectData} />
+      <BreadcrumbStructuredData breadcrumbs={[
+        { name: "Home", url: "https://www.dhruvchheda.com/" },
+        { name: "Projects", url: "https://www.dhruvchheda.com/projects/" }
+      ]} />
       <div className="project-container">
       <div className="project-header">
         <div className="project-text" data-aos="fade-right">

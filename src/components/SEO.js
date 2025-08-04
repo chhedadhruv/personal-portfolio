@@ -79,12 +79,65 @@ const SEO = ({
           "description": description,
           "author": {
             "@type": "Person",
-            "name": author
+            "name": author,
+            "url": "https://www.dhruvchheda.com/",
+            "jobTitle": "Full-Stack Developer",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Rapturous Technology"
+            }
           },
           "publisher": {
             "@type": "Person",
             "name": author
-          }
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://www.dhruvchheda.com/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          },
+          "sameAs": [
+            "https://github.com/dhruvcd",
+            "https://linkedin.com/in/dhruv-chheda",
+            "https://medium.com/@dhruvchheda"
+          ]
+        })}
+      </script>
+      
+      {/* Person Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": author,
+          "url": "https://www.dhruvchheda.com/",
+          "image": fullImage,
+          "jobTitle": "Full-Stack Developer",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Rapturous Technology"
+          },
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "K.J. Somaiya Institute of Technology"
+          },
+          "knowsAbout": [
+            "JavaScript",
+            "React",
+            "React Native",
+            ".NET",
+            "Web Development",
+            "Mobile App Development",
+            "Full Stack Development"
+          ],
+          "sameAs": [
+            "https://github.com/dhruvcd",
+            "https://linkedin.com/in/dhruv-chheda",
+            "https://medium.com/@dhruvchheda"
+          ]
         })}
       </script>
     </Helmet>

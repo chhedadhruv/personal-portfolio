@@ -3,43 +3,43 @@ export const seoData = {
     title: "Home",
     description: "Dhruv Chheda: Professional Web & App Developer specializing in JavaScript, React, React Native, .NET, and MS SQL Server. Creating responsive, high-performance applications with modern technologies and best practices.",
     keywords: "Dhruv Chheda, web developer, app developer, JavaScript, React, React Native, .NET, MS SQL Server, portfolio, full stack developer, responsive design, high-performance applications, modern web development",
-    url: "https://www.dhruvchheda.com",
+    url: "https://www.dhruvchheda.com/",
     canonicalUrl: "https://www.dhruvchheda.com/"
   },
   education: {
     title: "Education",
-    description: "Explore Dhruv Chheda's educational background and academic achievements. Learn about his Computer Engineering degree from K.J. Somaiya Institute of Technology and his academic journey in technology and software development.",
-    keywords: "Dhruv Chheda education, Computer Engineering, K.J. Somaiya Institute of Technology, academic achievements, educational background, technology education, software development education",
-    url: "https://www.dhruvchheda.com/education",
-    canonicalUrl: "https://www.dhruvchheda.com/education"
+    description: "Discover Dhruv Chheda's educational journey from Computer Engineering at K.J. Somaiya Institute of Technology to leadership roles in REDX-AI Club. Explore academic achievements, technical certifications, and his expertise in AI, ML, and software development gained through rigorous academic training.",
+    keywords: "Dhruv Chheda education, Computer Engineering KJSIT, K.J. Somaiya Institute of Technology, REDX-AI Club, academic achievements, educational background, technology education, software development education, AI ML certifications",
+    url: "https://www.dhruvchheda.com/education/",
+    canonicalUrl: "https://www.dhruvchheda.com/education/"
   },
   experience: {
     title: "Experience",
-    description: "Discover Dhruv Chheda's professional experience as a Full Stack React Native Developer at Rapturous Technology, internships, and diverse projects in mobile app development, geofencing technology, and project management systems.",
-    keywords: "Dhruv Chheda experience, Full Stack React Native Developer, Rapturous Technology, internships, mobile app development, geofencing technology, project management systems, professional experience",
-    url: "https://www.dhruvchheda.com/experience",
-    canonicalUrl: "https://www.dhruvchheda.com/experience"
+    description: "Explore Dhruv Chheda's professional journey from internships to Full Stack React Native Developer at Rapturous Technology. Experience includes mobile app development, geofencing technology at CASCADE, project management systems at KJSIT, and leading technical sessions on React Native development.",
+    keywords: "Dhruv Chheda professional experience, Full Stack React Native Developer, Rapturous Technology internship, CASCADE geofencing, KJSIT project management, mobile app development, React Native development, technical leadership",
+    url: "https://www.dhruvchheda.com/experience/",
+    canonicalUrl: "https://www.dhruvchheda.com/experience/"
   },
   projects: {
     title: "Projects",
-    description: "Explore Dhruv Chheda's innovative projects including RoboFriends, TrackaExpense, SkillFlex Resume Maker, and more. Each project showcases expertise in React, React Native, Firebase, and modern web technologies.",
-    keywords: "Dhruv Chheda projects, RoboFriends, TrackaExpense, SkillFlex Resume Maker, React projects, React Native projects, Firebase projects, web development projects, mobile app projects, JavaScript projects",
-    url: "https://www.dhruvchheda.com/projects",
-    canonicalUrl: "https://www.dhruvchheda.com/projects"
+    description: "Dive into Dhruv Chheda's innovative project portfolio featuring MyTodo task management ecosystem, TrackaExpense finance manager, Quote API with Docker deployment, Quotify inspiration app, and TrueYouTeller personality platform. Each project demonstrates full-stack expertise in React, React Native, Node.js, TypeScript, and cloud technologies.",
+    keywords: "Dhruv Chheda projects portfolio, MyTodo task management, TrackaExpense personal finance, Quote API Docker, Quotify app, TrueYouTeller personality test, React projects, React Native projects, Node.js TypeScript, full-stack development",
+    url: "https://www.dhruvchheda.com/projects/",
+    canonicalUrl: "https://www.dhruvchheda.com/projects/"
   },
   blogs: {
     title: "Blog",
     description: "Read Dhruv Chheda's tech blog featuring articles on web development, React Native, Firebase, Ubuntu setup, macOS development setup, and insights into modern software development practices and tutorials.",
     keywords: "Dhruv Chheda blog, tech blog, web development articles, React Native tutorials, Firebase guides, Ubuntu setup, macOS development setup, software development tutorials, programming articles",
-    url: "https://www.dhruvchheda.com/blogs",
-    canonicalUrl: "https://www.dhruvchheda.com/blogs"
+    url: "https://www.dhruvchheda.com/blogs/",
+    canonicalUrl: "https://www.dhruvchheda.com/blogs/"
   },
   contact: {
     title: "Contact",
     description: "Get in touch with Dhruv Chheda for web development, app development, or collaboration opportunities. Connect via email, LinkedIn, or GitHub for professional inquiries and project discussions.",
     keywords: "Dhruv Chheda contact, web developer contact, app developer contact, collaboration opportunities, professional inquiries, project discussions, hire developer",
-    url: "https://www.dhruvchheda.com/contact",
-    canonicalUrl: "https://www.dhruvchheda.com/contact"
+    url: "https://www.dhruvchheda.com/contact/",
+    canonicalUrl: "https://www.dhruvchheda.com/contact/"
   }
 };
 

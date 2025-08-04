@@ -5,6 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import SkeletonLoader from "../components/SkeletonLoader";
 import SEO from "../components/SEO";
+import BreadcrumbStructuredData from "../components/BreadcrumbStructuredData";
 import { seoData } from "../data/seoData";
 import "../styles/Contact.css";
 // Illustration now loaded from public/illustrations
@@ -55,6 +56,10 @@ function Contact() {
   return (
     <>
       <SEO {...seoData.contact} />
+      <BreadcrumbStructuredData breadcrumbs={[
+        { name: "Home", url: "https://www.dhruvchheda.com/" },
+        { name: "Contact", url: "https://www.dhruvchheda.com/contact/" }
+      ]} />
       <div className="contact-container">
       <div className="contact-form-container" data-aos="fade-right">
         <h2>Contact Me</h2>
