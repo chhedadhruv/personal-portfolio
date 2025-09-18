@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-// Illustration now loaded from public/illustrations
 import SkeletonLoader from "../components/SkeletonLoader";
 import SEO from "../components/SEO";
 import StructuredData from "../components/StructuredData";
@@ -12,6 +11,14 @@ import "../styles/Project.css";
 const projectData = [
   {
     id: 1,
+    title: "create-projex - Modern Project Scaffolding CLI",
+    description:
+      "A blazing-fast CLI tool to scaffold modern web projects with guided setup and AI assistance. Features lightning-fast local templates, smart prompts, dynamic variable templating, deploy-ready support (Vercel, Netlify, Cloudflare Pages), and built-in AI integration via Gemini CLI.",
+    technologies: ["Node.js", "TypeScript", "Vite", "TailwindCSS", "Astro", "Gemini CLI"],
+    link: "https://github.com/create-projex/create-projex",
+  },
+  {
+    id: 2,
     title: "MyTodo - Complete Task Management Ecosystem",
     description:
       "A modern, full-stack task management solution with web, mobile, and API. Features JWT authentication, real-time sync, dark/light themes, and comprehensive task management with priority levels and due date tracking.",
@@ -19,7 +26,7 @@ const projectData = [
     link: "https://github.com/chhedadhruv/myTodo",
   },
   {
-    id: 2,
+    id: 3,
     title: "TrackaExpense - Personal Finance Manager",
     description:
       "A comprehensive, ad-free personal finance app built with React Native and Firebase. Features expense tracking, income management, savings goals, bill splitting, and graphical insights.",
@@ -27,7 +34,7 @@ const projectData = [
     link: "https://github.com/chhedadhruv/TrackaExpense",
   },
   {
-    id: 3,
+    id: 4,
     title: "Quote API",
     description:
       "A modern, secure REST API for inspirational quotes with advanced search, tag-based filtering, rate limiting, and comprehensive documentation. Deployed on personal home server with Docker and Cloudflare tunnel integration.",
@@ -35,7 +42,7 @@ const projectData = [
     link: "https://github.com/chhedadhruv/inspirational-quotes-api",
   },
   {
-    id: 4,
+    id: 5,
     title: "Quotify - Daily Inspiration App",
     description:
       "A beautiful React Native app with 2,127+ inspiring quotes, smart category filtering, home screen widgets, and elegant design. Works completely offline with instant quote loading and cross-platform support.",
@@ -43,7 +50,7 @@ const projectData = [
     link: "https://github.com/chhedadhruv/quotify",
   },
   {
-    id: 5,
+    id: 6,
     title: "TrueYouTeller - Personality Test Platform",
     description:
       "A delightful personality test website that reveals 16 distinct personality types with spirit animals, career insights, and relationship guidance. Features mini-games and comprehensive personality analysis.",
@@ -51,7 +58,7 @@ const projectData = [
     link: "https://github.com/chhedadhruv/trueyouteller",
   },
   {
-    id: 6,
+    id: 7,
     title: "RoboFriends - Interactive Robot Gallery",
     description:
       "A modern React web application showcasing unique robot friends with smart search capabilities, real-time suggestions, and beautiful UI animations. Features Google Sheets integration and Robohash avatars.",
