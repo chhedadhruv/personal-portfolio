@@ -18,7 +18,7 @@ const internshipsData = [
     startDate: "November 2025",
     endDate: "Present",
     description:
-      "Own large parts of a production React Native (Expo) app end to end across iOS and Android, with flows made config-driven through a backend table so new content ships without an app release. Migrated API calls from RTK Query to TanStack Query as the single data layer, and replaced react-native-video with expo-video and preloading, removing a 2-3 s initial buffer. Automated releases with EAS Build and EAS Submit to TestFlight and the Play internal track, and built background EAS Update (OTA) handling. Reworked Mixpanel events and Sentry error reporting, and added Mux Data and EAS Insights/Observe for launch time and time-to-interactive. Built in-app messaging and actionable notifications, rebuilt the Samsung Health integration on the native Samsung SDK (Android), and built an Excel viewer. Prototyped on-device AI chat with local LLMs (Gemma, Qwen), with the model chosen by device RAM and storage.",
+      "Made flows config-driven through a backend table so new content ships without an app release. Migrated API calls from RTK Query to TanStack Query as the single data layer. Automated releases with EAS Build and EAS Submit to TestFlight and the Play internal track, and built background EAS Update (OTA) handling. Reworked Mixpanel events and Sentry error reporting, and added EAS Insights/Observe for launch time and time-to-interactive.",
   },
   {
     id: 2,
