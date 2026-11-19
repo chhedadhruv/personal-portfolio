@@ -4,6 +4,7 @@ import "../styles/Blogs.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 // Illustration now loaded from public/illustrations
+import { BlogIllustration } from "../components/Illustrations";
 import SkeletonLoader from "../components/SkeletonLoader";
 import SEO from "../components/SEO";
 import StructuredData from "../components/StructuredData";
@@ -48,12 +49,12 @@ const Blogs = () => {
         <div className="blogs-text">
           <h1 className="blogs-title">Blog Posts</h1>
           <p className="blogs-description">
-            Explore my thoughts and insights on software development, technology, and more.
-            I write about my experiences, share knowledge, and discuss the latest trends in tech.
+            Articles on mobile and web development, building a camera simulator, self-hosting and
+            open source, published on Medium. These are the {blogs.length} posts so far.
           </p>
         </div>
         <div className="blogs-illustration">
-          <img src="/illustrations/blog-illustration.webp" alt="Blogging illustration" />
+          <BlogIllustration />
         </div>
       </div>
       <div className="blogs-grid">

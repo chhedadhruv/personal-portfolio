@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { ContactIllustration } from "../components/Illustrations";
 import SkeletonLoader from "../components/SkeletonLoader";
 import SEO from "../components/SEO";
 import BreadcrumbStructuredData from "../components/BreadcrumbStructuredData";
@@ -132,7 +133,7 @@ function Contact() {
         </form>
       </div>
       <div className="contact-illustration" data-aos="fade-left">
-        <img src="/illustrations/contact-illustration.webp" alt="Contact Illustration" />
+        <ContactIllustration />
       </div>
     </div>
     </>

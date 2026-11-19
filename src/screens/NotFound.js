@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import { NotFoundIllustration } from '../components/Illustrations';
 // Error404 illustration now loaded from public/illustrations
 import '../styles/NotFound.css';
 
@@ -16,7 +17,7 @@ function NotFound() {
       <div className="notfound-container">
         <div className="notfound-content">
           <div className="notfound-image-container">
-            <img className="notfound-image" src="/illustrations/404.webp" alt="404 Not Found" />
+            <NotFoundIllustration className="notfound-image" />
           </div>
           <div className="notfound-text">
             <h1 className="notfound-title">Page Not Found</h1>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 // Illustration now loaded from public/illustrations
+import { EducationIllustration } from "../components/Illustrations";
 import SkeletonLoader from "../components/SkeletonLoader";
 import SEO from "../components/SEO";
 import StructuredData from "../components/StructuredData";
@@ -13,9 +14,9 @@ const educationData = [
   {
     id: 1,
     institution: "K.J Somaiya Institute Of Technology",
-    degree: "Bachelor of Technology",
+    degree: "B.Tech in Computer Engineering",
     startYear: 2021,
-    endYear: "Present",
+    endYear: 2025,
   },
   {
     id: 2,
@@ -91,15 +92,12 @@ const EducationCards = () => {
         <div className="education-text" data-aos="fade-right">
           <h2>Education</h2>
           <p className="education-description">
-            My educational journey has been marked by continuous learning and 
-            academic excellence. From foundational schooling to pursuing a 
-            Bachelor's degree in Technology, I have consistently demonstrated 
-            commitment to knowledge acquisition and skill development across 
-            various domains.
+            I completed a B.Tech in Computer Engineering at K.J. Somaiya Institute of Technology
+            (2021 to 2025), alongside activities in the REDX-AI Club, GDSC and the Students' Council.
           </p>
         </div>
         <div className="education-illustration" data-aos="fade-left">
-          <img src="/illustrations/education-illustration.webp" alt="Education" />
+          <EducationIllustration />
         </div>
       </div>
 

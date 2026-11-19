@@ -15,7 +15,7 @@ const SEO = ({
   tags = [],
   canonicalUrl
 }) => {
-  const siteTitle = "Dhruv Chheda - Web & App Developer";
+  const siteTitle = "Dhruv Chheda - Mobile Engineer";
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
   const fullImage = image.startsWith('http') ? image : `${url}${image}`;
   const fullCanonicalUrl = canonicalUrl || url;
@@ -81,10 +81,10 @@ const SEO = ({
             "@type": "Person",
             "name": author,
             "url": "https://www.dhruvchheda.com/",
-            "jobTitle": "Full-Stack Developer",
+            "jobTitle": "Mobile Engineer",
             "worksFor": {
               "@type": "Organization",
-              "name": "Rapturous Technology"
+              "name": "FOXO"
             }
           },
           "publisher": {
@@ -100,8 +100,8 @@ const SEO = ({
             "query-input": "required name=search_term_string"
           },
           "sameAs": [
-            "https://github.com/dhruvcd",
-            "https://linkedin.com/in/dhruv-chheda",
+            "https://github.com/chhedadhruv",
+            "https://www.linkedin.com/in/dhruv-chheda/",
             "https://medium.com/@dhruvchheda"
           ]
         })}
@@ -115,27 +115,27 @@ const SEO = ({
           "name": author,
           "url": "https://www.dhruvchheda.com/",
           "image": fullImage,
-          "jobTitle": "Full-Stack Developer",
+          "jobTitle": "Mobile Engineer",
           "worksFor": {
             "@type": "Organization",
-            "name": "Rapturous Technology"
+            "name": "FOXO"
           },
           "alumniOf": {
             "@type": "EducationalOrganization",
             "name": "K.J. Somaiya Institute of Technology"
           },
           "knowsAbout": [
-            "JavaScript",
-            "React",
             "React Native",
-            ".NET",
-            "Web Development",
+            "Expo",
+            "TypeScript",
+            "Firebase",
+            "TanStack Query",
             "Mobile App Development",
-            "Full Stack Development"
+            "Release Automation"
           ],
           "sameAs": [
-            "https://github.com/dhruvcd",
-            "https://linkedin.com/in/dhruv-chheda",
+            "https://github.com/chhedadhruv",
+            "https://www.linkedin.com/in/dhruv-chheda/",
             "https://medium.com/@dhruvchheda"
           ]
         })}

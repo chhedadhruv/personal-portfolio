@@ -1,0 +1,22 @@
+/* Colours come from the site's CSS variables so the artwork follows the theme. */
+.illustration-art { display: block; width: 100%; max-width: 440px; height: auto; margin-left: auto; filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.25)); }
+
+.illustration-art .il-disc { fill: var(--color-accent-primary); opacity: 0.14; }
+.illustration-art .il-card { fill: var(--color-bg-card); stroke: var(--color-border-light); stroke-width: 2; }
+.illustration-art .il-card-accent { stroke: var(--color-accent-primary); stroke-width: 3; }
+.illustration-art .il-card-fill { fill: var(--color-bg-card); }
+.illustration-art .il-lens { fill: var(--color-bg-card); opacity: 0.85; }
+.illustration-art .il-line { stroke: var(--color-border-light); stroke-linecap: round; fill: none; }
+.illustration-art .il-ring { fill: none; stroke: var(--color-bg-card); stroke-linecap: round; }
+.illustration-art .il-check { fill: none; stroke: var(--color-bg-card); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.illustration-art .il-purple { fill: var(--color-accent-primary); }
+.illustration-art .il-cyan { fill: var(--color-accent-secondary); }
+.illustration-art .il-green { fill: var(--color-accent-tertiary); }
+.illustration-art .il-amber { fill: var(--color-warning); }
+.illustration-art .il-soft { opacity: 0.55; }
+.illustration-art .il-stroke-purple { stroke: var(--color-accent-primary); stroke-linecap: round; stroke-linejoin: round; fill: none; }
+.illustration-art .il-stroke-amber { stroke: var(--color-warning); stroke-linecap: round; stroke-linejoin: round; fill: none; }
+
+@media (max-width: 768px) {
+  .illustration-art { margin: 0 auto; max-width: 320px; }
+}

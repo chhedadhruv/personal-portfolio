@@ -22,9 +22,11 @@ const BlogCard = ({ title, description, link, date, readTime }) => {
           <span className="blog-date" aria-label={`Published on ${formatDate(date)}`}>
             {formatDate(date)}
           </span>
-          <span className="blog-read-time" aria-label={`Estimated reading time: ${readTime}`}>
-            {readTime}
-          </span>
+          {readTime && (
+            <span className="blog-read-time" aria-label={`Estimated reading time: ${readTime}`}>
+              {readTime}
+            </span>
+          )}
         </div>
       </div>
     </a>

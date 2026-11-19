@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { ProjectsIllustration } from "../components/Illustrations";
 import SkeletonLoader from "../components/SkeletonLoader";
 import SEO from "../components/SEO";
 import StructuredData from "../components/StructuredData";
@@ -11,57 +12,65 @@ import "../styles/Project.css";
 const projectData = [
   {
     id: 1,
-    title: "create-projex - Modern Project Scaffolding CLI",
+    title: "TrackaExpense - Personal Finance App",
     description:
-      "A blazing-fast CLI tool to scaffold modern web projects with guided setup and AI assistance. Features lightning-fast local templates, smart prompts, dynamic variable templating, deploy-ready support (Vercel, Netlify, Cloudflare Pages), and built-in AI integration via Gemini CLI.",
-    technologies: ["Node.js", "TypeScript", "Vite", "TailwindCSS", "Astro", "Gemini CLI"],
-    link: "https://github.com/create-projex/create-projex",
+      "A solo-built, ad-free personal finance app with 126 registered users, published on Google Play. Group splits and settle-up, budgets, recurring transactions, credit-card tracking, receipt OCR with Google Cloud Vision and bank-SMS import, on an offline-first data layer (TanStack Query, MMKV, live Firestore listeners). Backed by 20 Cloud Functions and quality gates with Jest, Firestore rules tests and Maestro end-to-end flows.",
+    technologies: ["Expo SDK 58", "React Native", "TypeScript", "Firebase", "TanStack Query", "NativeWind"],
+    link: "https://github.com/chhedadhruv/TrackaExpense",
   },
   {
     id: 2,
+    title: "Learn Photography - Interactive Lessons",
+    description:
+      "A static, SEO-friendly site for beginner photographers with 93 Zod-validated MDX lessons, client-side search, JSON-LD and dynamic Open Graph images. Includes an interactive camera simulator built with React Three Fiber on a pure-TypeScript exposure and scoring engine, covered by about 277 Vitest tests.",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind", "MDX", "React Three Fiber"],
+    link: "https://learn.dhruvchheda.com",
+  },
+  {
+    id: 3,
+    title: "create-projex - Project Scaffolding CLI",
+    description:
+      "A CLI that scaffolds web projects from 7 templates with guided prompts, dry-run mode and deploy presets (Vercel, Netlify, Cloudflare Pages). Every template is build-checked in CI, and post-create hooks run as argv subprocesses rather than through a shell.",
+    technologies: ["Node.js", "TypeScript", "Vite", "Astro", "Next.js"],
+    link: "https://github.com/chhedadhruv/create-projex",
+  },
+  {
+    id: 4,
     title: "MyTodo - Complete Task Management Ecosystem",
     description:
-      "A modern, full-stack task management solution with web, mobile, and API. Features JWT authentication, real-time sync, dark/light themes, and comprehensive task management with priority levels and due date tracking.",
+      "A full-stack task management solution with web, mobile, and API. Features JWT authentication, real-time sync, dark/light themes, and task management with priority levels and due date tracking.",
     technologies: ["React", "React Native", "Node.js", "TypeScript", "PostgreSQL", "Docker", "Nginx"],
     link: "https://github.com/chhedadhruv/myTodo",
   },
   {
-    id: 3,
-    title: "TrackaExpense - Personal Finance Manager",
-    description:
-      "A comprehensive, ad-free personal finance app built with React Native and Firebase. Features expense tracking, income management, savings goals, bill splitting, and graphical insights.",
-    technologies: ["React Native", "Firebase", "React Navigation", "Chart Kit"],
-    link: "https://github.com/chhedadhruv/TrackaExpense",
-  },
-  {
-    id: 4,
+    id: 5,
     title: "Quote API",
     description:
-      "A modern, secure REST API for inspirational quotes with advanced search, tag-based filtering, rate limiting, and comprehensive documentation. Deployed on personal home server with Docker and Cloudflare tunnel integration.",
+      "A REST API for inspirational quotes with advanced search, tag-based filtering, rate limiting, and documentation. Deployed on a personal home server with Docker and a Cloudflare tunnel.",
     technologies: ["Node.js", "Express", "Docker", "Cloudflare", "PostgreSQL"],
     link: "https://github.com/chhedadhruv/inspirational-quotes-api",
   },
   {
-    id: 5,
+    id: 6,
     title: "Quotify - Daily Inspiration App",
     description:
-      "A beautiful React Native app with 2,127+ inspiring quotes, smart category filtering, home screen widgets, and elegant design. Works completely offline with instant quote loading and cross-platform support.",
+      "A React Native app with 2,127+ quotes, category filtering, home screen widgets and offline support. Works completely offline with instant quote loading on iOS and Android.",
     technologies: ["React Native", "TypeScript", "WidgetKit", "AsyncStorage"],
     link: "https://github.com/chhedadhruv/quotify",
   },
   {
-    id: 6,
+    id: 7,
     title: "TrueYouTeller - Personality Test Platform",
     description:
-      "A delightful personality test website that reveals 16 distinct personality types with spirit animals, career insights, and relationship guidance. Features mini-games and comprehensive personality analysis.",
-    technologies: ["React", "Vite", "Firebase", "TypeScript"],
+      "A personality test website that reveals 16 distinct personality types with spirit animals, career insights, and relationship guidance, plus themed mini quizzes.",
+    technologies: ["React", "React Router", "Vite", "Firebase"],
     link: "https://github.com/chhedadhruv/trueyouteller",
   },
   {
-    id: 7,
+    id: 8,
     title: "RoboFriends - Interactive Robot Gallery",
     description:
-      "A modern React web application showcasing unique robot friends with smart search capabilities, real-time suggestions, and beautiful UI animations. Features Google Sheets integration and Robohash avatars.",
+      "A React web app showcasing robot friends with smart search, real-time suggestions, and animated UI. Uses Google Sheets as a data source and Robohash avatars.",
     technologies: ["React", "React Bootstrap", "Google Sheets API", "Robohash"],
     link: "https://github.com/chhedadhruv/Robofriends",
   },
@@ -98,14 +107,11 @@ const Projects = () => {
         <div className="project-text" data-aos="fade-right">
           <h2>My Projects</h2>
           <p className="project-description">
-            Explore my diverse portfolio of full-stack applications, mobile apps, and APIs 
-            built with modern technologies. From complete task management ecosystems to 
-            personality testing platforms, each project showcases my expertise in creating 
-            scalable, user-friendly solutions across web, mobile, and backend development.
+            Production mobile apps, a photography learning site with an interactive camera simulator, and developer tools. The first three are my current featured work; the older projects below show my earlier full-stack range.
           </p>
         </div>
         <div className="project-illustration" data-aos="fade-left">
-          <img src="/illustrations/projects-illustration.webp" alt="Projects" />
+          <ProjectsIllustration />
         </div>
       </div>
 

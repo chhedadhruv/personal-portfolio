@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 // Illustration now loaded from public/illustrations
+import { ExperienceIllustration } from "../components/Illustrations";
 import SkeletonLoader from "../components/SkeletonLoader";
 import SEO from "../components/SEO";
 import StructuredData from "../components/StructuredData";
@@ -12,16 +13,33 @@ import "../styles/Experience.css";
 const internshipsData = [
   {
     id: 1,
-    title: "Full Stack React Native Developer Engineer",
-    company: "Rapturous Technology Private Limited",
-    startDate: "February 15, 2024",
-    endDate: "May 15, 2024",
-    description: `
-      I was a Full Stack React Native Developer Engineer at Rapturous Technology Private Limited in Delhi from February 15, 2024, to May 15, 2024. My role focused on developing and maintaining mobile applications using React Native, collaborating with cross-functional teams to implement new features and ensure optimal performance across various devices. I specialized in writing clean code, debugging technical issues, and integrating APIs and third-party libraries to enhance app functionality.
-    `,
+    title: "Software Development Engineer I (Mobile)",
+    company: "FOXO",
+    startDate: "November 2025",
+    endDate: "Present",
+    description:
+      "Own large parts of a production React Native (Expo) app end to end across iOS and Android, with flows made config-driven through a backend table so new content ships without an app release. Migrated API calls from RTK Query to TanStack Query as the single data layer, and replaced react-native-video with expo-video and preloading, removing a 2-3 s initial buffer. Automated releases with EAS Build and EAS Submit to TestFlight and the Play internal track, and built background EAS Update (OTA) handling. Reworked Mixpanel events and Sentry error reporting, and added Mux Data and EAS Insights/Observe for launch time and time-to-interactive. Built in-app messaging and actionable notifications, rebuilt the Samsung Health integration on the native Samsung SDK (Android), and built an Excel viewer. Prototyped on-device AI chat with local LLMs (Gemma, Qwen), with the model chosen by device RAM and storage.",
   },
   {
     id: 2,
+    title: "React Native Developer Intern",
+    company: "Rapturous Technology Pvt. Ltd.",
+    startDate: "February 2024",
+    endDate: "May 2024",
+    description:
+      "Built and deployed Android and iOS apps with React Native, Redux and REST APIs, with secure authentication and unit tests.",
+  },
+  {
+    id: 3,
+    title: "Mobile App Developer Intern, Surakshak Women's Safety Platform",
+    company: "REDX-AI Club, K.J. Somaiya Institute of Technology",
+    startDate: "July 2023",
+    endDate: "August 2023",
+    description:
+      "Co-built a safety platform across four repositories with a team of 7+: an Expo mobile app, a Next.js admin dashboard, a Firebase Cloud Functions backend and a landing site, localized in English, Hindi and Marathi with i18next. Built the release pipeline with GitHub Actions and EAS, where each push picks an OTA update or a native build from the diff across dev, staging and prod variants. Built the Cloud Functions backend (Node 22, TypeScript): a rate-limited public live-tracking API, 1-minute lost-contact detection, daily cleanup jobs, community moderation and push notifications via OneSignal.",
+  },
+  {
+    id: 4,
     title: "Winter Internship Program",
     company: "Software Development Cell & REDX-AI Club",
     startDate: "December 2023",
@@ -30,7 +48,7 @@ const internshipsData = [
       "During the winter internship program, I led an insightful session on 'Mobile App Development with React Native.' This session provided practical insights and real-world applications, emphasizing hands-on learning and collaboration with the Computer Engineering department, Software Development Cell, and REDX-AI Club.",
   },
   {
-    id: 3,
+    id: 5,
     title: "Geofencing Internship",
     company: "CASCADE, K.J Somaiya Institute of Technology",
     startDate: "April 10-14, 2023",
@@ -39,13 +57,13 @@ const internshipsData = [
       "Internship at CASCADE focusing on Geofencing technology, with hands-on experience in plotting agricultural plots. Demonstrated exceptional performance and practical skills in implementation.",
   },
   {
-    id: 4,
+    id: 6,
     title: "Project Examination Management System",
     company: "Software Development Cell, KJSIT",
     startDate: "March 1 2022",
     endDate: "May 31 2022",
     description:
-      "Completed an internship at the Software Development Cell, KJSIT, working on the Project Examination Management System from March 1, 2022, to May 31, 2023, under the guidance of Dr. Shyamal Virnodkar, Prof. Kavita Bathe, and Prof. Mrunali Desai. Achieved Intermediate Proficiency Level in HTML, CSS, JavaScript, .NET Framework, and MS SQL Server, demonstrating diligence, hard work, honesty, and strong technical skills.",
+      "Completed an internship at the Software Development Cell, KJSIT, working on the Project Examination Management System from March 1, 2022, to May 31, 2022, under the guidance of Dr. Shyamal Virnodkar, Prof. Kavita Bathe, and Prof. Mrunali Desai. Achieved Intermediate Proficiency Level in HTML, CSS, JavaScript, .NET Framework, and MS SQL Server.",
   },
 ];
 
@@ -80,22 +98,18 @@ const Experience = () => {
         <div className="experience-text" data-aos="fade-right">
           <h2>Experiences</h2>
           <p className="experience-description">
-            Explore my diverse internship journey spanning mobile app
-            development, React Native sessions, Geofencing technology, and
-            project management systems. From my role as a Full Stack React
-            Native Developer at Rapturous Technology to leading React Native
-            sessions with the Software Development Cell & REDX-AI Club, each
-            experience showcases my dedication to innovation and collaboration
-            in software development. Discover my hands-on expertise across
-            varied projects at CASCADE, K.J Somaiya Institute of Technology.
+            I work as a mobile engineer on a production React Native (Expo) app, where I focus on
+            data-layer migrations, release automation and observability. Before that I interned on
+            React Native apps and a women's safety platform, and I ran a React Native session for
+            the Software Development Cell and REDX-AI Club.
           </p>
         </div>
         <div className="experience-illustration" data-aos="fade-left">
-          <img src="/illustrations/experience-illustration.webp" alt="Experience" />
+          <ExperienceIllustration />
         </div>
       </div>
       <div className="internships-section">
-        <h3>Internships</h3>
+        <h3>Work and internships</h3>
         <div className="timeline">
           {internshipsData.map((internship, index) => (
             <div

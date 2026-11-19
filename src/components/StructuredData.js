@@ -6,10 +6,10 @@ const StructuredData = ({ type, data }) => {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Dhruv Chheda",
-    "jobTitle": "Web and App Developer",
+    "jobTitle": "Mobile Engineer",
     "url": "https://www.dhruvchheda.com",
     "image": "https://www.dhruvchheda.com/dhruv-chheda.webp",
-    "description": "Professional Web & App Developer specializing in JavaScript, React, React Native, .NET, and MS SQL Server. Creating responsive, high-performance applications with modern technologies and best practices.",
+    "description": "Mobile engineer with 1+ year shipping production React Native (Expo) apps on iOS and Android, focused on performance, release automation and AI-assisted development.",
     "sameAs": [
       "https://www.linkedin.com/in/dhruv-chheda/",
       "https://www.instagram.com/chheda.dhruv3/",
@@ -69,7 +69,7 @@ const StructuredData = ({ type, data }) => {
     "@context": "https://schema.org",
     "@type": "Blog",
     "name": "Dhruv Chheda's Tech Blog",
-    "description": "Tech blog featuring articles on web development, React Native, Firebase, and software development tutorials",
+    "description": "Articles on building a camera simulator, self-hosting, open source and software development, published on Medium",
     "author": {
       "@type": "Person",
       "name": "Dhruv Chheda"

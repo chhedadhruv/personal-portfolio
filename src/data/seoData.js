@@ -1,43 +1,43 @@
 export const seoData = {
   home: {
     title: "Home",
-    description: "Dhruv Chheda: Professional Web & App Developer specializing in JavaScript, React, React Native, .NET, and MS SQL Server. Creating responsive, high-performance applications with modern technologies and best practices.",
-    keywords: "Dhruv Chheda, web developer, app developer, JavaScript, React, React Native, .NET, MS SQL Server, portfolio, full stack developer, responsive design, high-performance applications, modern web development",
+    description: "Dhruv Chheda is a mobile engineer with 1+ year shipping production React Native (Expo) apps on iOS and Android, focused on performance, release automation and AI-assisted development.",
+    keywords: "Dhruv Chheda, mobile engineer, React Native, Expo, TypeScript, Firebase, TanStack Query, EAS Build, iOS, Android, portfolio",
     url: "https://www.dhruvchheda.com/",
     canonicalUrl: "https://www.dhruvchheda.com/"
   },
   education: {
     title: "Education",
-    description: "Discover Dhruv Chheda's educational journey from Computer Engineering at K.J. Somaiya Institute of Technology to leadership roles in REDX-AI Club. Explore academic achievements, technical certifications, and his expertise in AI, ML, and software development gained through rigorous academic training.",
-    keywords: "Dhruv Chheda education, Computer Engineering KJSIT, K.J. Somaiya Institute of Technology, REDX-AI Club, academic achievements, educational background, technology education, software development education, AI ML certifications",
+    description: "Dhruv Chheda completed a B.Tech in Computer Engineering at K.J. Somaiya Institute of Technology (2021 to 2025), with activities in the REDX-AI Club, GDSC and the Students' Council.",
+    keywords: "Dhruv Chheda education, Computer Engineering, K.J. Somaiya Institute of Technology, REDX-AI Club, GDSC KJSIT",
     url: "https://www.dhruvchheda.com/education/",
     canonicalUrl: "https://www.dhruvchheda.com/education/"
   },
   experience: {
     title: "Experience",
-    description: "Explore Dhruv Chheda's professional journey from internships to Full Stack React Native Developer at Rapturous Technology. Experience includes mobile app development, geofencing technology at CASCADE, project management systems at KJSIT, and leading technical sessions on React Native development.",
-    keywords: "Dhruv Chheda professional experience, Full Stack React Native Developer, Rapturous Technology internship, CASCADE geofencing, KJSIT project management, mobile app development, React Native development, technical leadership",
+    description: "Dhruv Chheda's experience: Software Development Engineer I (Mobile) at FOXO, plus React Native internships at Rapturous Technology and REDX-AI Club (Surakshak women's safety platform).",
+    keywords: "Dhruv Chheda experience, mobile engineer, React Native developer, Expo, EAS releases, TanStack Query, FOXO, Rapturous Technology, Surakshak",
     url: "https://www.dhruvchheda.com/experience/",
     canonicalUrl: "https://www.dhruvchheda.com/experience/"
   },
   projects: {
     title: "Projects",
-    description: "Dive into Dhruv Chheda's innovative project portfolio featuring MyTodo task management ecosystem, TrackaExpense finance manager, Quote API with Docker deployment, Quotify inspiration app, and TrueYouTeller personality platform. Each project demonstrates full-stack expertise in React, React Native, Node.js, TypeScript, and cloud technologies.",
-    keywords: "Dhruv Chheda projects portfolio, MyTodo task management, TrackaExpense personal finance, Quote API Docker, Quotify app, TrueYouTeller personality test, React projects, React Native projects, Node.js TypeScript, full-stack development",
+    description: "Projects by Dhruv Chheda: TrackaExpense (Expo and Firebase finance app on Google Play), Learn Photography (Next.js site with a camera simulator) and create-projex (project scaffolding CLI).",
+    keywords: "Dhruv Chheda projects, TrackaExpense, Learn Photography, create-projex, React Native app, Expo, Firebase, Next.js",
     url: "https://www.dhruvchheda.com/projects/",
     canonicalUrl: "https://www.dhruvchheda.com/projects/"
   },
   blogs: {
     title: "Blog",
-    description: "Read Dhruv Chheda's tech blog featuring articles on web development, React Native, Firebase, Ubuntu setup, macOS development setup, and insights into modern software development practices and tutorials.",
-    keywords: "Dhruv Chheda blog, tech blog, web development articles, React Native tutorials, Firebase guides, Ubuntu setup, macOS development setup, software development tutorials, programming articles",
+    description: "Articles by Dhruv Chheda on building a camera simulator, self-hosting, open source and software development setups, published on Medium.",
+    keywords: "Dhruv Chheda blog, Medium articles, camera simulator, home server, open source, React Native, Firebase",
     url: "https://www.dhruvchheda.com/blogs/",
     canonicalUrl: "https://www.dhruvchheda.com/blogs/"
   },
   contact: {
     title: "Contact",
-    description: "Get in touch with Dhruv Chheda for web development, app development, or collaboration opportunities. Connect via email, LinkedIn, or GitHub for professional inquiries and project discussions.",
-    keywords: "Dhruv Chheda contact, web developer contact, app developer contact, collaboration opportunities, professional inquiries, project discussions, hire developer",
+    description: "Contact Dhruv Chheda about mobile engineering work, React Native and Expo projects or collaboration by email, LinkedIn or GitHub.",
+    keywords: "Dhruv Chheda contact, mobile engineer contact, React Native, Expo, collaboration",
     url: "https://www.dhruvchheda.com/contact/",
     canonicalUrl: "https://www.dhruvchheda.com/contact/"
   }
@@ -47,7 +47,7 @@ export const generateBlogPostSEO = (blog) => {
   return {
     title: blog.title,
     description: blog.description,
-    keywords: `${blog.title}, Dhruv Chheda blog, tech article, web development, React Native, Firebase, software development, programming tutorial`,
+    keywords: `${blog.title}, Dhruv Chheda blog, tech article, Medium, software development`,
     url: `https://www.dhruvchheda.com/blog/${blog.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
     canonicalUrl: blog.link,
     article: true,
